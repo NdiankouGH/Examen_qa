@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="563de6cf-df3b-4c1d-be0e-3c8239b8829e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/qa_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab1/resources/MongoDBKeywords.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/resources/keyword.robot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/resources/setup_database.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/resources/variables.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/resources/variables.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/tests/auth_test.robot" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/tests/auth_test.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/tests/cart_test.robot" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/tests/cart_test.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/tests/product_test.robot" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/tests/product_test.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/tests/user_test.robot" beforeDir="false" afterPath="$PROJECT_DIR$/lab1/tests/user_test.robot" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "NdiankouGH"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/NdiankouGH/Examen_qa.git",
+    "accountId": "4e5f0549-4452-44b3-82c1-8f0478f5d569"
+  }
+}]]></component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="30WeXUAD0FgvfPlqdNlIoSPW1fG" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JavaScript Debug.log.html.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Robot Framework.run [Authenticate User With Invalid Credentials Test - Scénario Non Passant].executor": "Run",
+    "Robot Framework.run [Authenticate User With Nonexistent User Test - Scénario Non Passant].executor": "Run",
+    "Robot Framework.run [Get Cart By Invalid ID].executor": "Run",
+    "Robot Framework.run current file.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "junie.onboarding.icon.badge.shown": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="log.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/qa_test/log/log.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.log.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.26927.53" />
+        <option value="bundled-js-predefined-d6986cc7102b-09060db00ec0-JavaScript-IU-251.26927.53" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="563de6cf-df3b-4c1d-be0e-3c8239b8829e" name="Changes" comment="" />
+      <created>1753747799357</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1753747799357</updated>
+      <workItem from="1753747801757" duration="3363000" />
+      <workItem from="1753790241211" duration="5386000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="robot-line">
+          <url>file://$PROJECT_DIR$/lab1/tests/cart_test.robot</url>
+          <line>93</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

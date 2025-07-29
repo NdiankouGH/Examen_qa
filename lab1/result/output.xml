@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.2 on win32)" generated="2025-07-29T13:20:24.063425" rpa="false" schemaversion="5">
+<suite id="s1" name="User Test" source="H:\Github\examen_jee\qa_test\lab1\tests\user_test.robot">
+<kw name="Connect To Mongodb Atlas" owner="MongoDBKeywords" type="SETUP">
+<msg time="2025-07-29T13:20:24.442485" level="DEBUG">{"message": "Starting topology monitoring", "topologyId": {"$oid": "6888ca980bd5f07c48dfc458"}}</msg>
+<msg time="2025-07-29T13:20:24.442678" level="DEBUG">{"message": "Topology description changed", "topologyId": {"$oid": "6888ca980bd5f07c48dfc458"}, "previousDescription": "&lt;TopologyDescription id: 6888ca980bd5f07c48dfc458, topology_type: Unknown, servers: []&gt;", "newDescription": "&lt;TopologyDescription id: 6888ca980bd5f07c48dfc458, topology_type: ReplicaSetNoPrimary, servers: [&lt;ServerDescription ('ac-ybzd9ki-shard-00-00.hddhf8c.mongodb.net', 27017) server_type: Unknown, rtt: None&gt;, &lt;ServerDescription ('ac-ybzd9ki-shard-00-01.hddhf8c.mongodb.net', 27017) server_type: Unknown, rtt: None&gt;, &lt;ServerDescription ('ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net', 27017) server_type: Unknown, rtt: None&gt;]&gt;"}</msg>
+<msg time="2025-07-29T13:20:24.442797" level="DEBUG">{"message": "Starting server monitoring", "topologyId": {"$oid": "6888ca980bd5f07c48dfc458"}, "serverHost": "ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net", "serverPort": 27017}</msg>
+<msg time="2025-07-29T13:20:24.442840" level="DEBUG">{"message": "Starting server monitoring", "topologyId": {"$oid": "6888ca980bd5f07c48dfc458"}, "serverHost": "ac-ybzd9ki-shard-00-01.hddhf8c.mongodb.net", "serverPort": 27017}</msg>
+<msg time="2025-07-29T13:20:24.442881" level="DEBUG">{"message": "Starting server monitoring", "topologyId": {"$oid": "6888ca980bd5f07c48dfc458"}, "serverHost": "ac-ybzd9ki-shard-00-00.hddhf8c.mongodb.net", "serverPort": 27017}</msg>
+<msg time="2025-07-29T13:20:24.443198" level="DEBUG">{"message": "Connection pool created", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}, "serverHost": "ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net", "serverPort": 27017}</msg>
+<msg time="2025-07-29T13:20:24.444356" level="DEBUG">{"message": "Connection pool created", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}, "serverHost": "ac-ybzd9ki-shard-00-01.hddhf8c.mongodb.net", "serverPort": 27017}</msg>
+<msg time="2025-07-29T13:20:24.445525" level="DEBUG">{"message": "Connection pool created", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}, "serverHost": "ac-ybzd9ki-shard-00-00.hddhf8c.mongodb.net", "serverPort": 27017}</msg>
+<msg time="2025-07-29T13:20:24.446531" level="DEBUG">{"message": "Server selection started", "selector": "Primary()", "operation": "ping", "topologyDescription": "&lt;TopologyDescription id: 6888ca980bd5f07c48dfc458, topology_type: ReplicaSetNoPrimary, servers: [&lt;ServerDescription ('ac-ybzd9ki-shard-00-00.hddhf8c.mongodb.net', 27017) server_type: Unknown, rtt: None&gt;, &lt;ServerDescription ('ac-ybzd9ki-shard-00-01.hddhf8c.mongodb.net', 27017) server_type: Unknown, rtt: None&gt;, &lt;ServerDescription ('ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net', 27017) server_type: Unknown, rtt: None&gt;]&gt;", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}}</msg>
+<msg time="2025-07-29T13:20:24.446668" level="DEBUG">{"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "ping", "topologyDescription": "&lt;TopologyDescription id: 6888ca980bd5f07c48dfc458, topology_type: ReplicaSetNoPrimary, servers: [&lt;ServerDescription ('ac-ybzd9ki-shard-00-00.hddhf8c.mongodb.net', 27017) server_type: Unknown, rtt: None&gt;, &lt;ServerDescription ('ac-ybzd9ki-shard-00-01.hddhf8c.mongodb.net', 27017) server_type: Unknown, rtt: None&gt;, &lt;ServerDescription ('ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net', 27017) server_type: Unknown, rtt: None&gt;]&gt;", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}, "remainingTimeMS": 29999}</msg>
+<msg time="2025-07-29T13:20:24.912270" level="DEBUG">{"message": "Server selection succeeded", "selector": "Primary()", "operation": "ping", "topologyDescription": "&lt;TopologyDescription id: 6888ca980bd5f07c48dfc458, topology_type: ReplicaSetWithPrimary, servers: [&lt;ServerDescription ('ac-ybzd9ki-shard-00-00.hddhf8c.mongodb.net', 27017) server_type: Unknown, rtt: None&gt;, &lt;ServerDescription ('ac-ybzd9ki-shard-00-01.hddhf8c.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.06611640000483021&gt;, &lt;ServerDescription ('ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net', 27017) server_type: RSPrimary, rtt: 0.06532520000473596&gt;]&gt;", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}, "serverHost": "ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net", "serverPort": 27017}</msg>
+<msg time="2025-07-29T13:20:24.912383" level="DEBUG">{"message": "Connection checkout started", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}, "serverHost": "ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net", "serverPort": 27017}</msg>
+<msg time="2025-07-29T13:20:24.912445" level="DEBUG">{"message": "Connection created", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}, "serverHost": "ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net", "serverPort": 27017, "driverConnectionId": 1}</msg>
+<msg time="2025-07-29T13:20:25.294257" level="DEBUG">{"message": "Connection ready", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}, "serverHost": "ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net", "serverPort": 27017, "driverConnectionId": 1, "durationMS": 0.20957070001168177}</msg>
+<msg time="2025-07-29T13:20:25.294393" level="DEBUG">{"message": "Connection checked out", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}, "serverHost": "ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net", "serverPort": 27017, "driverConnectionId": 1, "durationMS": 0.38199700000404846}</msg>
+<msg time="2025-07-29T13:20:25.294648" level="DEBUG">{"message": "Command started", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}, "command": "{\"ping\": 1, \"lsid\": {\"id\": {\"$binary\": {\"base64\": \"Ok59vkixS8SkoCTIqrSPhw==\", \"subType\": \"04\"}}}, \"$clusterTime\": {\"clusterTime\": {\"$timestamp\": {\"t\": 1753795224, \"i\": 26}}, \"signature\": {\"hash\": {\"$binary\": {\"base64\": \"xj1Ymxxqn3rTo+7iJDkNi9TcRas=\", \"subType\": \"00\"}}, \"keyId\": 7469800103226638348}}, \"$db\": \"admin\"}", "commandName": "ping", "databaseName": "admin", "requestId": 26500, "operationId": 26500, "driverConnectionId": 1, "serverConnectionId": 588, "serverHost": "ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net", "serverPort": 27017}</msg>
+<msg time="2025-07-29T13:20:25.359241" level="DEBUG">{"message": "Command succeeded", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}, "durationMS": 64.55900000000001, "reply": "{\"ok\": 1}", "commandName": "ping", "databaseName": "admin", "requestId": 26500, "operationId": 26500, "driverConnectionId": 1, "serverConnectionId": 588, "serverHost": "ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net", "serverPort": 27017}</msg>
+<msg time="2025-07-29T13:20:25.359370" level="DEBUG">{"message": "Connection checked in", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}, "serverHost": "ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net", "serverPort": 27017, "driverConnectionId": 1}</msg>
+<msg time="2025-07-29T13:20:25.359562" level="DEBUG">{"message": "Server selection started", "selector": "Primary()", "operation": "listCollections", "topologyDescription": "&lt;TopologyDescription id: 6888ca980bd5f07c48dfc458, topology_type: ReplicaSetWithPrimary, servers: [&lt;ServerDescription ('ac-ybzd9ki-shard-00-00.hddhf8c.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.06769019999774173&gt;, &lt;ServerDescription ('ac-ybzd9ki-shard-00-01.hddhf8c.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.06611640000483021&gt;, &lt;ServerDescription ('ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net', 27017) server_type: RSPrimary, rtt: 0.06532520000473596&gt;]&gt;", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}}</msg>
+<msg time="2025-07-29T13:20:25.359678" level="DEBUG">{"message": "Server selection succeeded", "selector": "Primary()", "operation": "listCollections", "topologyDescription": "&lt;TopologyDescription id: 6888ca980bd5f07c48dfc458, topology_type: ReplicaSetWithPrimary, servers: [&lt;ServerDescription ('ac-ybzd9ki-shard-00-00.hddhf8c.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.06769019999774173&gt;, &lt;ServerDescription ('ac-ybzd9ki-shard-00-01.hddhf8c.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.06611640000483021&gt;, &lt;ServerDescription ('ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net', 27017) server_type: RSPrimary, rtt: 0.06532520000473596&gt;]&gt;", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}, "serverHost": "ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net", "serverPort": 27017}</msg>
+<msg time="2025-07-29T13:20:25.359846" level="DEBUG">{"message": "Connection checkout started", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}, "serverHost": "ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net", "serverPort": 27017}</msg>
+<msg time="2025-07-29T13:20:25.359915" level="DEBUG">{"message": "Connection checked out", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}, "serverHost": "ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net", "serverPort": 27017, "driverConnectionId": 1, "durationMS": 7.510000432375818e-05}</msg>
+<msg time="2025-07-29T13:20:25.360182" level="DEBUG">{"message": "Command started", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}, "command": "{\"listCollections\": 1, \"nameOnly\": true, \"lsid\": {\"id\": {\"$binary\": {\"base64\": \"Ok59vkixS8SkoCTIqrSPhw==\", \"subType\": \"04\"}}}, \"$clusterTime\": {\"clusterTime\": {\"$timestamp\": {\"t\": 1753795224, \"i\": 26}}, \"signature\": {\"hash\": {\"$binary\": {\"base64\": \"xj1Ymxxqn3rTo+7iJDkNi9TcRas=\", \"subType\": \"00\"}}, \"keyId\": 7469800103226638348}}, \"$db\": \"fakeStoredb\"}", "commandName": "listCollections", "databaseName": "fakeStoredb", "requestId": 19169, "operationId": 19169, "driverConnectionId": 1, "serverConnectionId": 588, "serverHost": "ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net", "serverPort": 27017}</msg>
+<msg time="2025-07-29T13:20:25.424504" level="DEBUG">{"message": "Command succeeded", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}, "durationMS": 64.264, "reply": "{\"cursor\": {\"ns\": \"fakeStoredb.$cmd.listCollections\", \"firstBatch\": [{\"name\": \"products\", \"type\": \"collection\"}, {\"name\": \"carts\", \"type\": \"collection\"}, {\"name\": \"users\", \"type\": \"collection\"}]}, \"ok\": 1.0, \"$clusterTime\": {\"clusterTime\": {\"$timestamp\": {\"t\": 1753795224, \"i\": 36}}, \"signature\": {\"hash\": {\"$binary\": {\"base64\": \"xj1Ymxxqn3rTo+7iJDkNi9TcRas=\", \"subType\": \"00\"}}, \"keyId\": 7469800103226638348}}, \"operationTime\": {\"$timestamp\": {\"t\": 1753795224, \"i\": 36}}}", "commandName": "listCollections", "databaseName": "fakeStoredb", "requestId": 19169, "operationId": 19169, "driverConnectionId": 1, "serverConnectionId": 588, "serverHost": "ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net", "serverPort": 27017}</msg>
+<msg time="2025-07-29T13:20:25.424671" level="DEBUG">{"message": "Connection checked in", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}, "serverHost": "ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net", "serverPort": 27017, "driverConnectionId": 1}</msg>
+<msg time="2025-07-29T13:20:25.425578" level="INFO">${MONGODB_CLIENT} = MongoClient(host=['ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net:27017', 'ac-ybzd9ki-shard-00-01.hddhf8c.mongodb.net:27017', 'ac-ybzd9ki-shard-00-00.hddhf8c.mongodb.net:27017'], document_class=dict, tz_a...</msg>
+<msg time="2025-07-29T13:20:25.426217" level="INFO">${MONGODB_DATABASE} = Database(MongoClient(host=['ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net:27017', 'ac-ybzd9ki-shard-00-01.hddhf8c.mongodb.net:27017', 'ac-ybzd9ki-shard-00-00.hddhf8c.mongodb.net:27017'], document_class=d...</msg>
+<arg>${MONGO_URI}</arg>
+<arg>${DB_NAME}</arg>
+<doc>Connexion à MongoDB Atlas</doc>
+<status status="PASS" start="2025-07-29T13:20:24.154141" elapsed="1.272147"/>
+</kw>
+<test id="s1-t1" name="Insert User Test - Scénario Passant" line="13">
+<kw name="Insert User" owner="MongoDBKeywords">
+<msg time="2025-07-29T13:20:25.428450" level="DEBUG">{"message": "Server selection started", "selector": "&lt;function writable_server_selector at 0x000001DC5DACB380&gt;", "operation": "insert", "topologyDescription": "&lt;TopologyDescription id: 6888ca980bd5f07c48dfc458, topology_type: ReplicaSetWithPrimary, servers: [&lt;ServerDescription ('ac-ybzd9ki-shard-00-00.hddhf8c.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.06769019999774173&gt;, &lt;ServerDescription ('ac-ybzd9ki-shard-00-01.hddhf8c.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.06611640000483021&gt;, &lt;ServerDescription ('ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net', 27017) server_type: RSPrimary, rtt: 0.06532520000473596&gt;]&gt;", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}}</msg>
+<msg time="2025-07-29T13:20:25.428585" level="DEBUG">{"message": "Server selection succeeded", "selector": "&lt;function writable_server_selector at 0x000001DC5DACB380&gt;", "operation": "insert", "topologyDescription": "&lt;TopologyDescription id: 6888ca980bd5f07c48dfc458, topology_type: ReplicaSetWithPrimary, servers: [&lt;ServerDescription ('ac-ybzd9ki-shard-00-00.hddhf8c.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.06769019999774173&gt;, &lt;ServerDescription ('ac-ybzd9ki-shard-00-01.hddhf8c.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.06611640000483021&gt;, &lt;ServerDescription ('ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net', 27017) server_type: RSPrimary, rtt: 0.06532520000473596&gt;]&gt;", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}, "serverHost": "ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net", "serverPort": 27017}</msg>
+<msg time="2025-07-29T13:20:25.428656" level="DEBUG">{"message": "Connection checkout started", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}, "serverHost": "ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net", "serverPort": 27017}</msg>
+<msg time="2025-07-29T13:20:25.428721" level="DEBUG">{"message": "Connection checked out", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}, "serverHost": "ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net", "serverPort": 27017, "driverConnectionId": 1, "durationMS": 6.289999873843044e-05}</msg>
+<msg time="2025-07-29T13:20:25.428950" level="DEBUG">{"message": "Command started", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}, "command": "{\"insert\": \"users\", \"ordered\": true, \"lsid\": {\"id\": {\"$binary\": {\"base64\": \"Ok59vkixS8SkoCTIqrSPhw==\", \"subType\": \"04\"}}}, \"txnNumber\": 1, \"$clusterTime\": {\"clusterTime\": {\"$timestamp\": {\"t\": 1753795224, \"i\": 36}}, \"signature\": {\"hash\": {\"$binary\": {\"base64\": \"xj1Ymxxqn3rTo+7iJDkNi9TcRas=\", \"subType\": \"00\"}}, \"keyId\": 7469800103226638348}}, \"writeConcern\": {\"w\": \"majority\"}, \"$db\": \"fakeStoredb\", \"documents\": [{\"firstname\": \"ndiankou\", \"lastname\": \"Ndoye\", \"email\": \"ndiankou.ndoye.test@example.com\", \"username\": \"ndiankou\", \"password\": \"password123\", \"phone\": \"+221771234567\", \"created_at\": {\"$date\": \"2025-07-29T13:20:25.428Z\"}, \"updated_at\": {\"$date\": \"2025-07-29T13:20:25.428Z\"}, \"_id\": {\"$oid\": \"6888ca990bd5f07c48dfc459\"}}]}", "commandName": "insert", "databaseName": "fakeStoredb", "requestId": 15724, "operationId": 15724, "driverConnectionId": 1, "serverConnectionId": 588, "serverHost": "ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net", "serverPort": 27017}</msg>
+<msg time="2025-07-29T13:20:25.506312" level="DEBUG">{"message": "Command succeeded", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}, "durationMS": 77.341, "reply": "{\"n\": 1, \"electionId\": {\"$oid\": \"7fffffff00000000000000ec\"}, \"opTime\": {\"ts\": {\"$timestamp\": {\"t\": 1753795225, \"i\": 2}}, \"t\": 236}, \"ok\": 1.0, \"$clusterTime\": {\"clusterTime\": {\"$timestamp\": {\"t\": 1753795225, \"i\": 2}}, \"signature\": {\"hash\": {\"$binary\": {\"base64\": \"qEv8AmQou23rY+y8ZmVlaqeMcNg=\", \"subType\": \"00\"}}, \"keyId\": 7469800103226638348}}, \"operationTime\": {\"$timestamp\": {\"t\": 1753795225, \"i\": 2}}}", "commandName": "insert", "databaseName": "fakeStoredb", "requestId": 15724, "operationId": 15724, "driverConnectionId": 1, "serverConnectionId": 588, "serverHost": "ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net", "serverPort": 27017}</msg>
+<msg time="2025-07-29T13:20:25.506428" level="DEBUG">{"message": "Connection checked in", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}, "serverHost": "ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net", "serverPort": 27017, "driverConnectionId": 1}</msg>
+<msg time="2025-07-29T13:20:25.507023" level="INFO">${user_id} = 6888ca990bd5f07c48dfc459</msg>
+<var>${user_id}</var>
+<arg>${VALID_USER_FIRSTNAME}</arg>
+<arg>${VALID_USER_LASTNAME}</arg>
+<arg>${VALID_USER_EMAIL}</arg>
+<arg>${VALID_USER_USERNAME}</arg>
+<arg>${VALID_USER_PASSWORD}</arg>
+<arg>${VALID_USER_PHONE}</arg>
+<doc>Insérer un utilisateur - Scénario passant</doc>
+<status status="PASS" start="2025-07-29T13:20:25.427916" elapsed="0.079157"/>
+</kw>
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<msg time="2025-07-29T13:20:25.507706" level="INFO">Length is 24.</msg>
+<arg>${user_id}</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="PASS" start="2025-07-29T13:20:25.507528" elapsed="0.000216"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2025-07-29T13:20:25.508731" level="INFO">${TEST_USER_ID} = 6888ca990bd5f07c48dfc459</msg>
+<arg>${TEST_USER_ID}</arg>
+<arg>${user_id}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2025-07-29T13:20:25.508021" elapsed="0.000754"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Utilisateur inséré avec succès: ${user_id}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-07-29T13:20:25.508903" elapsed="0.000449"/>
+</kw>
+<doc>Test d'insertion d'un utilisateur avec des données valides</doc>
+<tag>insert</tag>
+<tag>users</tag>
+<tag>valid</tag>
+<status status="PASS" start="2025-07-29T13:20:25.426427" elapsed="0.083065"/>
+</test>
+<test id="s1-t2" name="Get User By ID Test - Scénario Passant" line="27">
+<kw name="Get User By Id" owner="MongoDBKeywords">
+<msg time="2025-07-29T13:20:25.510960" level="DEBUG">{"message": "Server selection started", "selector": "Primary()", "operation": "find", "topologyDescription": "&lt;TopologyDescription id: 6888ca980bd5f07c48dfc458, topology_type: ReplicaSetWithPrimary, servers: [&lt;ServerDescription ('ac-ybzd9ki-shard-00-00.hddhf8c.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.06769019999774173&gt;, &lt;ServerDescription ('ac-ybzd9ki-shard-00-01.hddhf8c.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.06611640000483021&gt;, &lt;ServerDescription ('ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net', 27017) server_type: RSPrimary, rtt: 0.06532520000473596&gt;]&gt;", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}}</msg>
+<msg time="2025-07-29T13:20:25.511098" level="DEBUG">{"message": "Server selection succeeded", "selector": "Primary()", "operation": "find", "topologyDescription": "&lt;TopologyDescription id: 6888ca980bd5f07c48dfc458, topology_type: ReplicaSetWithPrimary, servers: [&lt;ServerDescription ('ac-ybzd9ki-shard-00-00.hddhf8c.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.06769019999774173&gt;, &lt;ServerDescription ('ac-ybzd9ki-shard-00-01.hddhf8c.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.06611640000483021&gt;, &lt;ServerDescription ('ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net', 27017) server_type: RSPrimary, rtt: 0.06532520000473596&gt;]&gt;", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}, "serverHost": "ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net", "serverPort": 27017}</msg>
+<msg time="2025-07-29T13:20:25.511175" level="DEBUG">{"message": "Connection checkout started", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}, "serverHost": "ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net", "serverPort": 27017}</msg>
+<msg time="2025-07-29T13:20:25.511242" level="DEBUG">{"message": "Connection checked out", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}, "serverHost": "ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net", "serverPort": 27017, "driverConnectionId": 1, "durationMS": 6.600000779144466e-05}</msg>
+<msg time="2025-07-29T13:20:25.511416" level="DEBUG">{"message": "Command started", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}, "command": "{\"find\": \"users\", \"filter\": {\"_id\": {\"$oid\": \"6888ca990bd5f07c48dfc459\"}}, \"limit\": 1, \"singleBatch\": true, \"lsid\": {\"id\": {\"$binary\": {\"base64\": \"Ok59vkixS8SkoCTIqrSPhw==\", \"subType\": \"04\"}}}, \"$clusterTime\": {\"clusterTime\": {\"$timestamp\": {\"t\": 1753795225, \"i\": 2}}, \"signature\": {\"hash\": {\"$binary\": {\"base64\": \"qEv8AmQou23rY+y8ZmVlaqeMcNg=\", \"subType\": \"00\"}}, \"keyId\": 7469800103226638348}}, \"$db\": \"fakeStoredb\"}", "commandName": "find", "databaseName": "fakeStoredb", "requestId": 11478, "operationId": 11478, "driverConnectionId": 1, "serverConnectionId": 588, "serverHost": "ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net", "serverPort": 27017}</msg>
+<msg time="2025-07-29T13:20:25.577106" level="DEBUG">{"message": "Command succeeded", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}, "durationMS": 65.594, "reply": "{\"cursor\": {\"firstBatch\": [{\"_id\": {\"$oid\": \"6888ca990bd5f07c48dfc459\"}, \"firstname\": \"ndiankou\", \"lastname\": \"Ndoye\", \"email\": \"ndiankou.ndoye.test@example.com\", \"username\": \"ndiankou\", \"password\": \"password123\", \"phone\": \"+221771234567\", \"created_at\": {\"$date\": \"2025-07-29T13:20:25.428Z\"}, \"updated_at\": {\"$date\": \"2025-07-29T13:20:25.428Z\"}}], \"ns\": \"fakeStoredb.users\"}, \"ok\": 1.0, \"$clusterTime\": {\"clusterTime\": {\"$timestamp\": {\"t\": 1753795225, \"i\": 3}}, \"signature\": {\"hash\": {\"$binary\": {\"base64\": \"qEv8AmQou23rY+y8ZmVlaqeMcNg=\", \"subType\": \"00\"}}, \"keyId\": 7469800103226638348}}, \"operationTime\": {\"$timestamp\": {\"t\": 1753795225, \"i\": 3}}}", "commandName": "find", "databaseName": "fakeStoredb", "requestId": 11478, "operationId": 11478, "driverConnectionId": 1, "serverConnectionId": 588, "serverHost": "ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net", "serverPort": 27017}</msg>
+<msg time="2025-07-29T13:20:25.577249" level="DEBUG">{"message": "Connection checked in", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}, "serverHost": "ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net", "serverPort": 27017, "driverConnectionId": 1}</msg>
+<msg time="2025-07-29T13:20:25.578710" level="INFO">${user} = {'_id': '6888ca990bd5f07c48dfc459', 'firstname': 'ndiankou', 'lastname': 'Ndoye', 'email': 'ndiankou.ndoye.test@example.com', 'username': 'ndiankou', 'password': 'password123', 'phone': '+221771234567...</msg>
+<var>${user}</var>
+<arg>${TEST_USER_ID}</arg>
+<doc>Récupérer un utilisateur par ID - Scénario passant</doc>
+<status status="PASS" start="2025-07-29T13:20:25.510542" elapsed="0.068204"/>
+</kw>
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<msg time="2025-07-29T13:20:25.580110" level="INFO">Length is 9.</msg>
+<arg>${user}</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="PASS" start="2025-07-29T13:20:25.578925" elapsed="0.001227"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<msg time="2025-07-29T13:20:25.580830" level="DEBUG">Argument types are:
+&lt;class 'str'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${user['username']}</arg>
+<arg>${VALID_USER_USERNAME}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-07-29T13:20:25.580310" elapsed="0.000560"/>
+</kw>
+<doc>Test de récupération d'un utilisateur par ID</doc>
+<tag>get</tag>
+<tag>users</tag>
+<tag>valid</tag>
+<status status="PASS" start="2025-07-29T13:20:25.510060" elapsed="0.071248"/>
+</test>
+<test id="s1-t3" name="Update User Test - Scénario Passant" line="34">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-07-29T13:20:25.585916" level="INFO">${updated_username} = ndiankou_updated</msg>
+<var>${updated_username}</var>
+<arg>${VALID_USER_USERNAME}_updated</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-07-29T13:20:25.585735" elapsed="0.000207"/>
+</kw>
+<kw name="Update User" owner="MongoDBKeywords">
+<msg time="2025-07-29T13:20:25.587389" level="DEBUG">{"message": "Server selection started", "selector": "&lt;function writable_server_selector at 0x000001DC5DACB380&gt;", "operation": "update", "topologyDescription": "&lt;TopologyDescription id: 6888ca980bd5f07c48dfc458, topology_type: ReplicaSetWithPrimary, servers: [&lt;ServerDescription ('ac-ybzd9ki-shard-00-00.hddhf8c.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.06769019999774173&gt;, &lt;ServerDescription ('ac-ybzd9ki-shard-00-01.hddhf8c.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.06611640000483021&gt;, &lt;ServerDescription ('ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net', 27017) server_type: RSPrimary, rtt: 0.06532520000473596&gt;]&gt;", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}}</msg>
+<msg time="2025-07-29T13:20:25.587626" level="DEBUG">{"message": "Server selection succeeded", "selector": "&lt;function writable_server_selector at 0x000001DC5DACB380&gt;", "operation": "update", "topologyDescription": "&lt;TopologyDescription id: 6888ca980bd5f07c48dfc458, topology_type: ReplicaSetWithPrimary, servers: [&lt;ServerDescription ('ac-ybzd9ki-shard-00-00.hddhf8c.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.06769019999774173&gt;, &lt;ServerDescription ('ac-ybzd9ki-shard-00-01.hddhf8c.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.06611640000483021&gt;, &lt;ServerDescription ('ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net', 27017) server_type: RSPrimary, rtt: 0.06532520000473596&gt;]&gt;", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}, "serverHost": "ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net", "serverPort": 27017}</msg>
+<msg time="2025-07-29T13:20:25.587708" level="DEBUG">{"message": "Connection checkout started", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}, "serverHost": "ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net", "serverPort": 27017}</msg>
+<msg time="2025-07-29T13:20:25.587790" level="DEBUG">{"message": "Connection checked out", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}, "serverHost": "ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net", "serverPort": 27017, "driverConnectionId": 1, "durationMS": 6.769999163225293e-05}</msg>
+<msg time="2025-07-29T13:20:25.588017" level="DEBUG">{"message": "Command started", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}, "command": "{\"update\": \"users\", \"ordered\": true, \"lsid\": {\"id\": {\"$binary\": {\"base64\": \"Ok59vkixS8SkoCTIqrSPhw==\", \"subType\": \"04\"}}}, \"txnNumber\": 2, \"$clusterTime\": {\"clusterTime\": {\"$timestamp\": {\"t\": 1753795225, \"i\": 3}}, \"signature\": {\"hash\": {\"$binary\": {\"base64\": \"qEv8AmQou23rY+y8ZmVlaqeMcNg=\", \"subType\": \"00\"}}, \"keyId\": 7469800103226638348}}, \"writeConcern\": {\"w\": \"majority\"}, \"$db\": \"fakeStoredb\", \"updates\": [{\"q\": {\"_id\": {\"$oid\": \"6888ca990bd5f07c48dfc459\"}}, \"u\": {\"$set\": {\"updated_at\": {\"$date\": \"2025-07-29T13:20:25.587Z\"}, \"username\": \"ndiankou_updated\"}}}]}", "commandName": "update", "databaseName": "fakeStoredb", "requestId": 29358, "operationId": 29358, "driverConnectionId": 1, "serverConnectionId": 588, "serverHost": "ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net", "serverPort": 27017}</msg>
+<msg time="2025-07-29T13:20:25.657806" level="DEBUG">{"message": "Command succeeded", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}, "durationMS": 69.779, "reply": "{\"n\": 1, \"electionId\": {\"$oid\": \"7fffffff00000000000000ec\"}, \"opTime\": {\"ts\": {\"$timestamp\": {\"t\": 1753795225, \"i\": 5}}, \"t\": 236}, \"nModified\": 1, \"ok\": 1.0, \"$clusterTime\": {\"clusterTime\": {\"$timestamp\": {\"t\": 1753795225, \"i\": 5}}, \"signature\": {\"hash\": {\"$binary\": {\"base64\": \"qEv8AmQou23rY+y8ZmVlaqeMcNg=\", \"subType\": \"00\"}}, \"keyId\": 7469800103226638348}}, \"operationTime\": {\"$timestamp\": {\"t\": 1753795225, \"i\": 5}}}", "commandName": "update", "databaseName": "fakeStoredb", "requestId": 29358, "operationId": 29358, "driverConnectionId": 1, "serverConnectionId": 588, "serverHost": "ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net", "serverPort": 27017}</msg>
+<msg time="2025-07-29T13:20:25.657915" level="DEBUG">{"message": "Connection checked in", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}, "serverHost": "ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net", "serverPort": 27017, "driverConnectionId": 1}</msg>
+<msg time="2025-07-29T13:20:25.658482" level="INFO">${result} = 1</msg>
+<var>${result}</var>
+<arg>${TEST_USER_ID}</arg>
+<arg>username=${updated_username}</arg>
+<doc>Mettre à jour un utilisateur - Scénario passant</doc>
+<status status="PASS" start="2025-07-29T13:20:25.586076" elapsed="0.072455"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2025-07-29T13:20:25.658971" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${result}</arg>
+<arg>1</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2025-07-29T13:20:25.658811" elapsed="0.000213"/>
+</kw>
+<kw name="Get User By Id" owner="MongoDBKeywords">
+<msg time="2025-07-29T13:20:25.659945" level="DEBUG">{"message": "Server selection started", "selector": "Primary()", "operation": "find", "topologyDescription": "&lt;TopologyDescription id: 6888ca980bd5f07c48dfc458, topology_type: ReplicaSetWithPrimary, servers: [&lt;ServerDescription ('ac-ybzd9ki-shard-00-00.hddhf8c.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.06769019999774173&gt;, &lt;ServerDescription ('ac-ybzd9ki-shard-00-01.hddhf8c.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.06611640000483021&gt;, &lt;ServerDescription ('ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net', 27017) server_type: RSPrimary, rtt: 0.06532520000473596&gt;]&gt;", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}}</msg>
+<msg time="2025-07-29T13:20:25.660090" level="DEBUG">{"message": "Server selection succeeded", "selector": "Primary()", "operation": "find", "topologyDescription": "&lt;TopologyDescription id: 6888ca980bd5f07c48dfc458, topology_type: ReplicaSetWithPrimary, servers: [&lt;ServerDescription ('ac-ybzd9ki-shard-00-00.hddhf8c.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.06769019999774173&gt;, &lt;ServerDescription ('ac-ybzd9ki-shard-00-01.hddhf8c.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.06611640000483021&gt;, &lt;ServerDescription ('ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net', 27017) server_type: RSPrimary, rtt: 0.06532520000473596&gt;]&gt;", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}, "serverHost": "ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net", "serverPort": 27017}</msg>
+<msg time="2025-07-29T13:20:25.660170" level="DEBUG">{"message": "Connection checkout started", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}, "serverHost": "ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net", "serverPort": 27017}</msg>
+<msg time="2025-07-29T13:20:25.660239" level="DEBUG">{"message": "Connection checked out", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}, "serverHost": "ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net", "serverPort": 27017, "driverConnectionId": 1, "durationMS": 6.75999908708036e-05}</msg>
+<msg time="2025-07-29T13:20:25.660407" level="DEBUG">{"message": "Command started", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}, "command": "{\"find\": \"users\", \"filter\": {\"_id\": {\"$oid\": \"6888ca990bd5f07c48dfc459\"}}, \"limit\": 1, \"singleBatch\": true, \"lsid\": {\"id\": {\"$binary\": {\"base64\": \"Ok59vkixS8SkoCTIqrSPhw==\", \"subType\": \"04\"}}}, \"$clusterTime\": {\"clusterTime\": {\"$timestamp\": {\"t\": 1753795225, \"i\": 5}}, \"signature\": {\"hash\": {\"$binary\": {\"base64\": \"qEv8AmQou23rY+y8ZmVlaqeMcNg=\", \"subType\": \"00\"}}, \"keyId\": 7469800103226638348}}, \"$db\": \"fakeStoredb\"}", "commandName": "find", "databaseName": "fakeStoredb", "requestId": 26962, "operationId": 26962, "driverConnectionId": 1, "serverConnectionId": 588, "serverHost": "ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net", "serverPort": 27017}</msg>
+<msg time="2025-07-29T13:20:25.728518" level="DEBUG">{"message": "Command succeeded", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}, "durationMS": 68.015, "reply": "{\"cursor\": {\"firstBatch\": [{\"_id\": {\"$oid\": \"6888ca990bd5f07c48dfc459\"}, \"firstname\": \"ndiankou\", \"lastname\": \"Ndoye\", \"email\": \"ndiankou.ndoye.test@example.com\", \"username\": \"ndiankou_updated\", \"password\": \"password123\", \"phone\": \"+221771234567\", \"created_at\": {\"$date\": \"2025-07-29T13:20:25.428Z\"}, \"updated_at\": {\"$date\": \"2025-07-29T13:20:25.587Z\"}}], \"ns\": \"fakeStoredb.users\"}, \"ok\": 1.0, \"$clusterTime\": {\"clusterTime\": {\"$timestamp\": {\"t\": 1753795225, \"i\": 12}}, \"signature\": {\"hash\": {\"$binary\": {\"base64\": \"qEv8AmQou23rY+y8ZmVlaqeMcNg=\", \"subType\": \"00\"}}, \"keyId\": 7469800103226638348}}, \"operationTime\": {\"$timestamp\": {\"t\": 1753795225, \"i\": 12}}}", "commandName": "find", "databaseName": "fakeStoredb", "requestId": 26962, "operationId": 26962, "driverConnectionId": 1, "serverConnectionId": 588, "serverHost": "ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net", "serverPort": 27017}</msg>
+<msg time="2025-07-29T13:20:25.728680" level="DEBUG">{"message": "Connection checked in", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}, "serverHost": "ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net", "serverPort": 27017, "driverConnectionId": 1}</msg>
+<msg time="2025-07-29T13:20:25.732705" level="INFO">${user} = {'_id': '6888ca990bd5f07c48dfc459', 'firstname': 'ndiankou', 'lastname': 'Ndoye', 'email': 'ndiankou.ndoye.test@example.com', 'username': 'ndiankou_updated', 'password': 'password123', 'phone': '+2217...</msg>
+<var>${user}</var>
+<arg>${TEST_USER_ID}</arg>
+<doc>Récupérer un utilisateur par ID - Scénario passant</doc>
+<status status="PASS" start="2025-07-29T13:20:25.659422" elapsed="0.073326"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<msg time="2025-07-29T13:20:25.733516" level="DEBUG">Argument types are:
+&lt;class 'str'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${user['username']}</arg>
+<arg>${updated_username}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-07-29T13:20:25.732923" elapsed="0.000636"/>
+</kw>
+<doc>Test de mise à jour d'un utilisateur</doc>
+<tag>update</tag>
+<tag>users</tag>
+<tag>valid</tag>
+<status status="PASS" start="2025-07-29T13:20:25.585327" elapsed="0.148608"/>
+</test>
+<test id="s1-t4" name="Update User With Invalid ID - Scénario Non Passant" line="43">
+<kw name="Run Keyword And Expect Error" owner="BuiltIn">
+<kw name="Update User" owner="MongoDBKeywords">
+<msg time="2025-07-29T13:20:25.736155" level="FAIL">Échec mise à jour utilisateur: ID d'utilisateur invalide : 123</msg>
+<msg time="2025-07-29T13:20:25.737730" level="DEBUG">Traceback (most recent call last):
+  File "H:\Github\examen_jee\qa_test\lab1\resources\MongoDBKeywords.py", line 417, in update_user
+    user_id = ObjectId(user_id)
+  File "H:\Github\examen_jee\qa_test\.venv\Lib\site-packages\bson\objectid.py", line 105, in __init__
+    self.__validate(oid)
+    ~~~~~~~~~~~~~~~^^^^^
+  File "H:\Github\examen_jee\qa_test\.venv\Lib\site-packages\bson\objectid.py", line 193, in __validate
+    _raise_invalid_id(oid)
+    ~~~~~~~~~~~~~~~~~^^^^^
+  File "H:\Github\examen_jee\qa_test\.venv\Lib\site-packages\bson\objectid.py", line 38, in _raise_invalid_id
+    raise InvalidId(
+    ...&lt;2 lines&gt;...
+    )
+bson.errors.InvalidId: '123' is not a valid ObjectId, it must be a 12-byte input or a 24-character hex string
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "H:\Github\examen_jee\qa_test\lab1\resources\MongoDBKeywords.py", line 419, in update_user
+    raise Exception(f"ID d'utilisateur invalide : {user_id}")
+Exception: ID d'utilisateur invalide : 123
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "H:\Github\examen_jee\qa_test\lab1\resources\MongoDBKeywords.py", line 434, in update_user
+    raise Exception(f"Échec mise à jour utilisateur: {str(e)}")
+Exception: Échec mise à jour utilisateur: ID d'utilisateur invalide : 123</msg>
+<arg>123</arg>
+<arg>username=nouveau_nom_utilisateur</arg>
+<doc>Mettre à jour un utilisateur - Scénario passant</doc>
+<status status="FAIL" start="2025-07-29T13:20:25.735661" elapsed="0.002129">Échec mise à jour utilisateur: ID d'utilisateur invalide : 123</status>
+</kw>
+<arg>*Échec mise à jour utilisateur: ID d'utilisateur invalide : 123*</arg>
+<arg>Update User</arg>
+<arg>123</arg>
+<arg>username=nouveau_nom_utilisateur</arg>
+<doc>Runs the keyword and checks that the expected error occurred.</doc>
+<status status="PASS" start="2025-07-29T13:20:25.735535" elapsed="0.003295"/>
+</kw>
+<doc>Test de mise à jour d'un utilisateur avec un ID invalide</doc>
+<tag>invalid</tag>
+<tag>update</tag>
+<tag>users</tag>
+<status status="PASS" start="2025-07-29T13:20:25.734946" elapsed="0.004233"/>
+</test>
+<test id="s1-t5" name="Update User With Nonexistent ID Test - Scénario Non Passant" line="50">
+<kw name="Run Keyword And Expect Error" owner="BuiltIn">
+<kw name="Update User" owner="MongoDBKeywords">
+<msg time="2025-07-29T13:20:25.740643" level="FAIL">Échec mise à jour utilisateur: ID d'utilisateur invalide : nonexistent_id</msg>
+<msg time="2025-07-29T13:20:25.741492" level="DEBUG">Traceback (most recent call last):
+  File "H:\Github\examen_jee\qa_test\lab1\resources\MongoDBKeywords.py", line 417, in update_user
+    user_id = ObjectId(user_id)
+  File "H:\Github\examen_jee\qa_test\.venv\Lib\site-packages\bson\objectid.py", line 105, in __init__
+    self.__validate(oid)
+    ~~~~~~~~~~~~~~~^^^^^
+  File "H:\Github\examen_jee\qa_test\.venv\Lib\site-packages\bson\objectid.py", line 193, in __validate
+    _raise_invalid_id(oid)
+    ~~~~~~~~~~~~~~~~~^^^^^
+  File "H:\Github\examen_jee\qa_test\.venv\Lib\site-packages\bson\objectid.py", line 38, in _raise_invalid_id
+    raise InvalidId(
+    ...&lt;2 lines&gt;...
+    )
+bson.errors.InvalidId: 'nonexistent_id' is not a valid ObjectId, it must be a 12-byte input or a 24-character hex string
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "H:\Github\examen_jee\qa_test\lab1\resources\MongoDBKeywords.py", line 419, in update_user
+    raise Exception(f"ID d'utilisateur invalide : {user_id}")
+Exception: ID d'utilisateur invalide : nonexistent_id
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "H:\Github\examen_jee\qa_test\lab1\resources\MongoDBKeywords.py", line 434, in update_user
+    raise Exception(f"Échec mise à jour utilisateur: {str(e)}")
+Exception: Échec mise à jour utilisateur: ID d'utilisateur invalide : nonexistent_id</msg>
+<arg>nonexistent_id</arg>
+<arg>username=nouveau_nom_utilisateur</arg>
+<doc>Mettre à jour un utilisateur - Scénario passant</doc>
+<status status="FAIL" start="2025-07-29T13:20:25.740255" elapsed="0.001285">Échec mise à jour utilisateur: ID d'utilisateur invalide : nonexistent_id</status>
+</kw>
+<arg>*Échec mise à jour utilisateur: ID d'utilisateur invalide : nonexistent_id*</arg>
+<arg>Update User</arg>
+<arg>nonexistent_id</arg>
+<arg>username=nouveau_nom_utilisateur</arg>
+<doc>Runs the keyword and checks that the expected error occurred.</doc>
+<status status="PASS" start="2025-07-29T13:20:25.740110" elapsed="0.001669"/>
+</kw>
+<doc>Test de mise à jour d'un utilisateur avec un ID inexistant</doc>
+<tag>invalid</tag>
+<tag>update</tag>
+<tag>users</tag>
+<status status="PASS" start="2025-07-29T13:20:25.739658" elapsed="0.002336"/>
+</test>
+<test id="s1-t6" name="Delete User Test - Scénario Passant" line="56">
+<kw name="Insert User" owner="MongoDBKeywords">
+<msg time="2025-07-29T13:20:25.743609" level="DEBUG">{"message": "Server selection started", "selector": "&lt;function writable_server_selector at 0x000001DC5DACB380&gt;", "operation": "insert", "topologyDescription": "&lt;TopologyDescription id: 6888ca980bd5f07c48dfc458, topology_type: ReplicaSetWithPrimary, servers: [&lt;ServerDescription ('ac-ybzd9ki-shard-00-00.hddhf8c.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.06769019999774173&gt;, &lt;ServerDescription ('ac-ybzd9ki-shard-00-01.hddhf8c.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.06611640000483021&gt;, &lt;ServerDescription ('ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net', 27017) server_type: RSPrimary, rtt: 0.06532520000473596&gt;]&gt;", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}}</msg>
+<msg time="2025-07-29T13:20:25.743808" level="DEBUG">{"message": "Server selection succeeded", "selector": "&lt;function writable_server_selector at 0x000001DC5DACB380&gt;", "operation": "insert", "topologyDescription": "&lt;TopologyDescription id: 6888ca980bd5f07c48dfc458, topology_type: ReplicaSetWithPrimary, servers: [&lt;ServerDescription ('ac-ybzd9ki-shard-00-00.hddhf8c.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.06769019999774173&gt;, &lt;ServerDescription ('ac-ybzd9ki-shard-00-01.hddhf8c.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.06611640000483021&gt;, &lt;ServerDescription ('ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net', 27017) server_type: RSPrimary, rtt: 0.06532520000473596&gt;]&gt;", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}, "serverHost": "ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net", "serverPort": 27017}</msg>
+<msg time="2025-07-29T13:20:25.743932" level="DEBUG">{"message": "Connection checkout started", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}, "serverHost": "ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net", "serverPort": 27017}</msg>
+<msg time="2025-07-29T13:20:25.744016" level="DEBUG">{"message": "Connection checked out", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}, "serverHost": "ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net", "serverPort": 27017, "driverConnectionId": 1, "durationMS": 7.779999577905983e-05}</msg>
+<msg time="2025-07-29T13:20:25.744232" level="DEBUG">{"message": "Command started", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}, "command": "{\"insert\": \"users\", \"ordered\": true, \"lsid\": {\"id\": {\"$binary\": {\"base64\": \"Ok59vkixS8SkoCTIqrSPhw==\", \"subType\": \"04\"}}}, \"txnNumber\": 3, \"$clusterTime\": {\"clusterTime\": {\"$timestamp\": {\"t\": 1753795225, \"i\": 12}}, \"signature\": {\"hash\": {\"$binary\": {\"base64\": \"qEv8AmQou23rY+y8ZmVlaqeMcNg=\", \"subType\": \"00\"}}, \"keyId\": 7469800103226638348}}, \"writeConcern\": {\"w\": \"majority\"}, \"$db\": \"fakeStoredb\", \"documents\": [{\"firstname\": \"Delete\", \"lastname\": \"Test\", \"email\": \"delete.test@example.com\", \"username\": \"deletetest\", \"password\": \"password123\", \"phone\": \"+221771234567\", \"created_at\": {\"$date\": \"2025-07-29T13:20:25.742Z\"}, \"updated_at\": {\"$date\": \"2025-07-29T13:20:25.742Z\"}, \"_id\": {\"$oid\": \"6888ca990bd5f07c48dfc45a\"}}]}", "commandName": "insert", "databaseName": "fakeStoredb", "requestId": 24464, "operationId": 24464, "driverConnectionId": 1, "serverConnectionId": 588, "serverHost": "ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net", "serverPort": 27017}</msg>
+<msg time="2025-07-29T13:20:25.814058" level="DEBUG">{"message": "Command succeeded", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}, "durationMS": 69.80699999999999, "reply": "{\"n\": 1, \"electionId\": {\"$oid\": \"7fffffff00000000000000ec\"}, \"opTime\": {\"ts\": {\"$timestamp\": {\"t\": 1753795225, \"i\": 14}}, \"t\": 236}, \"ok\": 1.0, \"$clusterTime\": {\"clusterTime\": {\"$timestamp\": {\"t\": 1753795225, \"i\": 14}}, \"signature\": {\"hash\": {\"$binary\": {\"base64\": \"qEv8AmQou23rY+y8ZmVlaqeMcNg=\", \"subType\": \"00\"}}, \"keyId\": 7469800103226638348}}, \"operationTime\": {\"$timestamp\": {\"t\": 1753795225, \"i\": 14}}}", "commandName": "insert", "databaseName": "fakeStoredb", "requestId": 24464, "operationId": 24464, "driverConnectionId": 1, "serverConnectionId": 588, "serverHost": "ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net", "serverPort": 27017}</msg>
+<msg time="2025-07-29T13:20:25.814169" level="DEBUG">{"message": "Connection checked in", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}, "serverHost": "ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net", "serverPort": 27017, "driverConnectionId": 1}</msg>
+<msg time="2025-07-29T13:20:25.814912" level="INFO">${user_id} = 6888ca990bd5f07c48dfc45a</msg>
+<var>${user_id}</var>
+<arg>Delete</arg>
+<arg>Test</arg>
+<arg>delete.test@example.com</arg>
+<arg>deletetest</arg>
+<arg>password123</arg>
+<arg>+221771234567</arg>
+<doc>Insérer un utilisateur - Scénario passant</doc>
+<status status="PASS" start="2025-07-29T13:20:25.742776" elapsed="0.072164"/>
+</kw>
+<kw name="Delete User" owner="MongoDBKeywords">
+<msg time="2025-07-29T13:20:25.815543" level="DEBUG">{"message": "Server selection started", "selector": "&lt;function writable_server_selector at 0x000001DC5DACB380&gt;", "operation": "delete", "topologyDescription": "&lt;TopologyDescription id: 6888ca980bd5f07c48dfc458, topology_type: ReplicaSetWithPrimary, servers: [&lt;ServerDescription ('ac-ybzd9ki-shard-00-00.hddhf8c.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.06769019999774173&gt;, &lt;ServerDescription ('ac-ybzd9ki-shard-00-01.hddhf8c.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.06611640000483021&gt;, &lt;ServerDescription ('ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net', 27017) server_type: RSPrimary, rtt: 0.06532520000473596&gt;]&gt;", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}}</msg>
+<msg time="2025-07-29T13:20:25.815652" level="DEBUG">{"message": "Server selection succeeded", "selector": "&lt;function writable_server_selector at 0x000001DC5DACB380&gt;", "operation": "delete", "topologyDescription": "&lt;TopologyDescription id: 6888ca980bd5f07c48dfc458, topology_type: ReplicaSetWithPrimary, servers: [&lt;ServerDescription ('ac-ybzd9ki-shard-00-00.hddhf8c.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.06769019999774173&gt;, &lt;ServerDescription ('ac-ybzd9ki-shard-00-01.hddhf8c.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.06611640000483021&gt;, &lt;ServerDescription ('ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net', 27017) server_type: RSPrimary, rtt: 0.06532520000473596&gt;]&gt;", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}, "serverHost": "ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net", "serverPort": 27017}</msg>
+<msg time="2025-07-29T13:20:25.815727" level="DEBUG">{"message": "Connection checkout started", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}, "serverHost": "ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net", "serverPort": 27017}</msg>
+<msg time="2025-07-29T13:20:25.815786" level="DEBUG">{"message": "Connection checked out", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}, "serverHost": "ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net", "serverPort": 27017, "driverConnectionId": 1, "durationMS": 5.7600002037361264e-05}</msg>
+<msg time="2025-07-29T13:20:25.815947" level="DEBUG">{"message": "Command started", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}, "command": "{\"delete\": \"users\", \"ordered\": true, \"lsid\": {\"id\": {\"$binary\": {\"base64\": \"Ok59vkixS8SkoCTIqrSPhw==\", \"subType\": \"04\"}}}, \"txnNumber\": 4, \"$clusterTime\": {\"clusterTime\": {\"$timestamp\": {\"t\": 1753795225, \"i\": 14}}, \"signature\": {\"hash\": {\"$binary\": {\"base64\": \"qEv8AmQou23rY+y8ZmVlaqeMcNg=\", \"subType\": \"00\"}}, \"keyId\": 7469800103226638348}}, \"writeConcern\": {\"w\": \"majority\"}, \"$db\": \"fakeStoredb\", \"deletes\": [{\"q\": {\"_id\": {\"$oid\": \"6888ca990bd5f07c48dfc45a\"}}, \"limit\": 1}]}", "commandName": "delete", "databaseName": "fakeStoredb", "requestId": 5705, "operationId": 5705, "driverConnectionId": 1, "serverConnectionId": 588, "serverHost": "ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net", "serverPort": 27017}</msg>
+<msg time="2025-07-29T13:20:25.883844" level="DEBUG">{"message": "Command succeeded", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}, "durationMS": 67.839, "reply": "{\"n\": 1, \"electionId\": {\"$oid\": \"7fffffff00000000000000ec\"}, \"opTime\": {\"ts\": {\"$timestamp\": {\"t\": 1753795225, \"i\": 15}}, \"t\": 236}, \"ok\": 1.0, \"$clusterTime\": {\"clusterTime\": {\"$timestamp\": {\"t\": 1753795225, \"i\": 15}}, \"signature\": {\"hash\": {\"$binary\": {\"base64\": \"qEv8AmQou23rY+y8ZmVlaqeMcNg=\", \"subType\": \"00\"}}, \"keyId\": 7469800103226638348}}, \"operationTime\": {\"$timestamp\": {\"t\": 1753795225, \"i\": 15}}}", "commandName": "delete", "databaseName": "fakeStoredb", "requestId": 5705, "operationId": 5705, "driverConnectionId": 1, "serverConnectionId": 588, "serverHost": "ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net", "serverPort": 27017}</msg>
+<msg time="2025-07-29T13:20:25.883950" level="DEBUG">{"message": "Connection checked in", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}, "serverHost": "ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net", "serverPort": 27017, "driverConnectionId": 1}</msg>
+<msg time="2025-07-29T13:20:25.887628" level="INFO">${result} = 1</msg>
+<var>${result}</var>
+<arg>${user_id}</arg>
+<doc>Supprimer un utilisateur - Scénario passant</doc>
+<status status="PASS" start="2025-07-29T13:20:25.815206" elapsed="0.072475"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2025-07-29T13:20:25.888659" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${result}</arg>
+<arg>1</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2025-07-29T13:20:25.888414" elapsed="0.000300"/>
+</kw>
+<kw name="Run Keyword And Expect Error" owner="BuiltIn">
+<kw name="Get User By Id" owner="MongoDBKeywords">
+<msg time="2025-07-29T13:20:25.889570" level="DEBUG">{"message": "Server selection started", "selector": "Primary()", "operation": "find", "topologyDescription": "&lt;TopologyDescription id: 6888ca980bd5f07c48dfc458, topology_type: ReplicaSetWithPrimary, servers: [&lt;ServerDescription ('ac-ybzd9ki-shard-00-00.hddhf8c.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.06769019999774173&gt;, &lt;ServerDescription ('ac-ybzd9ki-shard-00-01.hddhf8c.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.06611640000483021&gt;, &lt;ServerDescription ('ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net', 27017) server_type: RSPrimary, rtt: 0.06532520000473596&gt;]&gt;", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}}</msg>
+<msg time="2025-07-29T13:20:25.889710" level="DEBUG">{"message": "Server selection succeeded", "selector": "Primary()", "operation": "find", "topologyDescription": "&lt;TopologyDescription id: 6888ca980bd5f07c48dfc458, topology_type: ReplicaSetWithPrimary, servers: [&lt;ServerDescription ('ac-ybzd9ki-shard-00-00.hddhf8c.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.06769019999774173&gt;, &lt;ServerDescription ('ac-ybzd9ki-shard-00-01.hddhf8c.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.06611640000483021&gt;, &lt;ServerDescription ('ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net', 27017) server_type: RSPrimary, rtt: 0.06532520000473596&gt;]&gt;", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}, "serverHost": "ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net", "serverPort": 27017}</msg>
+<msg time="2025-07-29T13:20:25.889779" level="DEBUG">{"message": "Connection checkout started", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}, "serverHost": "ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net", "serverPort": 27017}</msg>
+<msg time="2025-07-29T13:20:25.889838" level="DEBUG">{"message": "Connection checked out", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}, "serverHost": "ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net", "serverPort": 27017, "driverConnectionId": 1, "durationMS": 6.009999196976423e-05}</msg>
+<msg time="2025-07-29T13:20:25.890023" level="DEBUG">{"message": "Command started", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}, "command": "{\"find\": \"users\", \"filter\": {\"_id\": {\"$oid\": \"6888ca990bd5f07c48dfc45a\"}}, \"limit\": 1, \"singleBatch\": true, \"lsid\": {\"id\": {\"$binary\": {\"base64\": \"Ok59vkixS8SkoCTIqrSPhw==\", \"subType\": \"04\"}}}, \"$clusterTime\": {\"clusterTime\": {\"$timestamp\": {\"t\": 1753795225, \"i\": 15}}, \"signature\": {\"hash\": {\"$binary\": {\"base64\": \"qEv8AmQou23rY+y8ZmVlaqeMcNg=\", \"subType\": \"00\"}}, \"keyId\": 7469800103226638348}}, \"$db\": \"fakeStoredb\"}", "commandName": "find", "databaseName": "fakeStoredb", "requestId": 28145, "operationId": 28145, "driverConnectionId": 1, "serverConnectionId": 588, "serverHost": "ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net", "serverPort": 27017}</msg>
+<msg time="2025-07-29T13:20:25.955406" level="DEBUG">{"message": "Command succeeded", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}, "durationMS": 65.36500000000001, "reply": "{\"cursor\": {\"ns\": \"fakeStoredb.users\"}, \"ok\": 1.0, \"$clusterTime\": {\"clusterTime\": {\"$timestamp\": {\"t\": 1753795225, \"i\": 17}}, \"signature\": {\"hash\": {\"$binary\": {\"base64\": \"qEv8AmQou23rY+y8ZmVlaqeMcNg=\", \"subType\": \"00\"}}, \"keyId\": 7469800103226638348}}, \"operationTime\": {\"$timestamp\": {\"t\": 1753795225, \"i\": 17}}}", "commandName": "find", "databaseName": "fakeStoredb", "requestId": 28145, "operationId": 28145, "driverConnectionId": 1, "serverConnectionId": 588, "serverHost": "ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net", "serverPort": 27017}</msg>
+<msg time="2025-07-29T13:20:25.955508" level="DEBUG">{"message": "Connection checked in", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}, "serverHost": "ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net", "serverPort": 27017, "driverConnectionId": 1}</msg>
+<msg time="2025-07-29T13:20:25.955904" level="FAIL">Échec récupération utilisateur: Utilisateur non trouvé avec ID: 6888ca990bd5f07c48dfc45a</msg>
+<msg time="2025-07-29T13:20:25.956374" level="DEBUG">Traceback (most recent call last):
+  File "H:\Github\examen_jee\qa_test\lab1\resources\MongoDBKeywords.py", line 362, in get_user_by_id
+    raise Exception(f"Utilisateur non trouvé avec ID: {user_id}")
+Exception: Utilisateur non trouvé avec ID: 6888ca990bd5f07c48dfc45a
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "H:\Github\examen_jee\qa_test\lab1\resources\MongoDBKeywords.py", line 366, in get_user_by_id
+    raise Exception(f"Échec récupération utilisateur: {str(e)}")
+Exception: Échec récupération utilisateur: Utilisateur non trouvé avec ID: 6888ca990bd5f07c48dfc45a</msg>
+<arg>${user_id}</arg>
+<doc>Récupérer un utilisateur par ID - Scénario passant</doc>
+<status status="FAIL" start="2025-07-29T13:20:25.889159" elapsed="0.067248">Échec récupération utilisateur: Utilisateur non trouvé avec ID: 6888ca990bd5f07c48dfc45a</status>
+</kw>
+<arg>*non trouvé*</arg>
+<arg>Get User By ID</arg>
+<arg>${user_id}</arg>
+<doc>Runs the keyword and checks that the expected error occurred.</doc>
+<status status="PASS" start="2025-07-29T13:20:25.888900" elapsed="0.067685"/>
+</kw>
+<doc>Test de suppression d'un utilisateur</doc>
+<tag>delete</tag>
+<tag>users</tag>
+<tag>valid</tag>
+<status status="PASS" start="2025-07-29T13:20:25.742399" elapsed="0.214501"/>
+</test>
+<test id="s1-t7" name="Insert User With Invalid Data Test - Scénario Non Passant" line="64">
+<kw name="Run Keyword And Expect Error" owner="BuiltIn">
+<kw name="Insert User Should Fail" owner="MongoDBKeywords">
+<msg time="2025-07-29T13:20:25.960558" level="FAIL">L'email est requis et doit être une chaîne de caractères</msg>
+<msg time="2025-07-29T13:20:25.960991" level="DEBUG">Traceback (most recent call last):
+  File "H:\Github\examen_jee\qa_test\lab1\resources\MongoDBKeywords.py", line 320, in insert_user_should_fail
+    raise ValueError("L'email est requis et doit être une chaîne de caractères")
+ValueError: L'email est requis et doit être une chaîne de caractères
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "H:\Github\examen_jee\qa_test\lab1\resources\MongoDBKeywords.py", line 340, in insert_user_should_fail
+    raise Exception(str(e))
+Exception: L'email est requis et doit être une chaîne de caractères</msg>
+<arg>${INVALID_USER_DATA_DUPLICATE_EMAIL['firstname']}</arg>
+<arg>${INVALID_USER_DATA_DUPLICATE_EMAIL['lastname']}</arg>
+<arg>${INVALID_USER_DATA_DUPLICATE_EMAIL['email']}</arg>
+<arg>${INVALID_USER_DATA_DUPLICATE_EMAIL['username']}</arg>
+<arg>${INVALID_USER_DATA_DUPLICATE_EMAIL['password']}</arg>
+<arg>${INVALID_USER_DATA_DUPLICATE_EMAIL['phone']}</arg>
+<doc>Insérer un utilisateur - Scénario non passant (données invalides)</doc>
+<status status="FAIL" start="2025-07-29T13:20:25.958444" elapsed="0.002581">L'email est requis et doit être une chaîne de caractères</status>
+</kw>
+<arg>*L'email est requis et doit être une chaîne de caractères*</arg>
+<arg>Insert User Should Fail</arg>
+<arg>${INVALID_USER_DATA_DUPLICATE_EMAIL['firstname']}</arg>
+<arg>${INVALID_USER_DATA_DUPLICATE_EMAIL['lastname']}</arg>
+<arg>${INVALID_USER_DATA_DUPLICATE_EMAIL['email']}</arg>
+<arg>${INVALID_USER_DATA_DUPLICATE_EMAIL['username']}</arg>
+<arg>${INVALID_USER_DATA_DUPLICATE_EMAIL['password']}</arg>
+<arg>${INVALID_USER_DATA_DUPLICATE_EMAIL['phone']}</arg>
+<doc>Runs the keyword and checks that the expected error occurred.</doc>
+<status status="PASS" start="2025-07-29T13:20:25.957937" elapsed="0.003303"/>
+</kw>
+<doc>Test d'insertion d'un utilisateur avec des données invalides (ex : email dupliqué)</doc>
+<tag>insert</tag>
+<tag>invalid</tag>
+<tag>users</tag>
+<status status="PASS" start="2025-07-29T13:20:25.957597" elapsed="0.003962"/>
+</test>
+<test id="s1-t8" name="Insert User With Empty Email Test - Scénario Non Passant" line="75">
+<kw name="Run Keyword And Expect Error" owner="BuiltIn">
+<kw name="Insert User Should Fail" owner="MongoDBKeywords">
+<msg time="2025-07-29T13:20:25.963260" level="FAIL">L'email est requis et doit être une chaîne de caractères</msg>
+<msg time="2025-07-29T13:20:25.963688" level="DEBUG">Traceback (most recent call last):
+  File "H:\Github\examen_jee\qa_test\lab1\resources\MongoDBKeywords.py", line 320, in insert_user_should_fail
+    raise ValueError("L'email est requis et doit être une chaîne de caractères")
+ValueError: L'email est requis et doit être une chaîne de caractères
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "H:\Github\examen_jee\qa_test\lab1\resources\MongoDBKeywords.py", line 340, in insert_user_should_fail
+    raise Exception(str(e))
+Exception: L'email est requis et doit être une chaîne de caractères</msg>
+<arg>Test</arg>
+<arg>User</arg>
+<arg>testuser</arg>
+<arg>password123</arg>
+<arg>+221771234567</arg>
+<doc>Insérer un utilisateur - Scénario non passant (données invalides)</doc>
+<status status="FAIL" start="2025-07-29T13:20:25.962881" elapsed="0.000838">L'email est requis et doit être une chaîne de caractères</status>
+</kw>
+<arg>*email est requis*</arg>
+<arg>Insert User Should Fail</arg>
+<arg>Test</arg>
+<arg>User</arg>
+<arg>testuser</arg>
+<arg>password123</arg>
+<arg>+221771234567</arg>
+<doc>Runs the keyword and checks that the expected error occurred.</doc>
+<status status="PASS" start="2025-07-29T13:20:25.962651" elapsed="0.001238"/>
+</kw>
+<doc>Vérifie qu'un utilisateur sans email est rejeté</doc>
+<tag>insert</tag>
+<tag>invalid</tag>
+<tag>users</tag>
+<status status="PASS" start="2025-07-29T13:20:25.962152" elapsed="0.001866"/>
+</test>
+<test id="s1-t9" name="Get User By Invalid ID Test - Scénario Non Passant" line="87">
+<kw name="Get User By Invalid Id" owner="MongoDBKeywords">
+<msg time="2025-07-29T13:20:25.965496" level="DEBUG">{"message": "Server selection started", "selector": "Primary()", "operation": "find", "topologyDescription": "&lt;TopologyDescription id: 6888ca980bd5f07c48dfc458, topology_type: ReplicaSetWithPrimary, servers: [&lt;ServerDescription ('ac-ybzd9ki-shard-00-00.hddhf8c.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.06769019999774173&gt;, &lt;ServerDescription ('ac-ybzd9ki-shard-00-01.hddhf8c.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.06611640000483021&gt;, &lt;ServerDescription ('ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net', 27017) server_type: RSPrimary, rtt: 0.06532520000473596&gt;]&gt;", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}}</msg>
+<msg time="2025-07-29T13:20:25.965612" level="DEBUG">{"message": "Server selection succeeded", "selector": "Primary()", "operation": "find", "topologyDescription": "&lt;TopologyDescription id: 6888ca980bd5f07c48dfc458, topology_type: ReplicaSetWithPrimary, servers: [&lt;ServerDescription ('ac-ybzd9ki-shard-00-00.hddhf8c.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.06769019999774173&gt;, &lt;ServerDescription ('ac-ybzd9ki-shard-00-01.hddhf8c.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.06611640000483021&gt;, &lt;ServerDescription ('ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net', 27017) server_type: RSPrimary, rtt: 0.06532520000473596&gt;]&gt;", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}, "serverHost": "ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net", "serverPort": 27017}</msg>
+<msg time="2025-07-29T13:20:25.965676" level="DEBUG">{"message": "Connection checkout started", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}, "serverHost": "ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net", "serverPort": 27017}</msg>
+<msg time="2025-07-29T13:20:25.965734" level="DEBUG">{"message": "Connection checked out", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}, "serverHost": "ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net", "serverPort": 27017, "driverConnectionId": 1, "durationMS": 5.5900003644637764e-05}</msg>
+<msg time="2025-07-29T13:20:25.965878" level="DEBUG">{"message": "Command started", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}, "command": "{\"find\": \"users\", \"filter\": {\"_id\": \"invalidid123\"}, \"limit\": 1, \"singleBatch\": true, \"lsid\": {\"id\": {\"$binary\": {\"base64\": \"Ok59vkixS8SkoCTIqrSPhw==\", \"subType\": \"04\"}}}, \"$clusterTime\": {\"clusterTime\": {\"$timestamp\": {\"t\": 1753795225, \"i\": 17}}, \"signature\": {\"hash\": {\"$binary\": {\"base64\": \"qEv8AmQou23rY+y8ZmVlaqeMcNg=\", \"subType\": \"00\"}}, \"keyId\": 7469800103226638348}}, \"$db\": \"fakeStoredb\"}", "commandName": "find", "databaseName": "fakeStoredb", "requestId": 23281, "operationId": 23281, "driverConnectionId": 1, "serverConnectionId": 588, "serverHost": "ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net", "serverPort": 27017}</msg>
+<msg time="2025-07-29T13:20:26.031404" level="DEBUG">{"message": "Command succeeded", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}, "durationMS": 65.478, "reply": "{\"cursor\": {\"ns\": \"fakeStoredb.users\"}, \"ok\": 1.0, \"$clusterTime\": {\"clusterTime\": {\"$timestamp\": {\"t\": 1753795225, \"i\": 22}}, \"signature\": {\"hash\": {\"$binary\": {\"base64\": \"qEv8AmQou23rY+y8ZmVlaqeMcNg=\", \"subType\": \"00\"}}, \"keyId\": 7469800103226638348}}, \"operationTime\": {\"$timestamp\": {\"t\": 1753795225, \"i\": 22}}}", "commandName": "find", "databaseName": "fakeStoredb", "requestId": 23281, "operationId": 23281, "driverConnectionId": 1, "serverConnectionId": 588, "serverHost": "ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net", "serverPort": 27017}</msg>
+<msg time="2025-07-29T13:20:26.031520" level="DEBUG">{"message": "Connection checked in", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}, "serverHost": "ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net", "serverPort": 27017, "driverConnectionId": 1}</msg>
+<msg time="2025-07-29T13:20:26.031828" level="INFO">${result} = None</msg>
+<var>${result}</var>
+<arg>invalidid123</arg>
+<doc>Récupérer un utilisateur avec ID invalide - Scénario non passant</doc>
+<status status="PASS" start="2025-07-29T13:20:25.965133" elapsed="0.066720"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${result}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-07-29T13:20:26.032162" elapsed="0.000356"/>
+</kw>
+<doc>Test de récupération d'un utilisateur avec un ID invalide</doc>
+<tag>get</tag>
+<tag>invalid</tag>
+<tag>users</tag>
+<status status="PASS" start="2025-07-29T13:20:25.964701" elapsed="0.067987"/>
+</test>
+<test id="s1-t10" name="Get User By Nonexistent ID Test - Scénario Non Passant" line="95">
+<kw name="Get User By Invalid Id" owner="MongoDBKeywords">
+<msg time="2025-07-29T13:20:26.033947" level="DEBUG">{"message": "Server selection started", "selector": "Primary()", "operation": "find", "topologyDescription": "&lt;TopologyDescription id: 6888ca980bd5f07c48dfc458, topology_type: ReplicaSetWithPrimary, servers: [&lt;ServerDescription ('ac-ybzd9ki-shard-00-00.hddhf8c.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.06769019999774173&gt;, &lt;ServerDescription ('ac-ybzd9ki-shard-00-01.hddhf8c.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.06611640000483021&gt;, &lt;ServerDescription ('ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net', 27017) server_type: RSPrimary, rtt: 0.06532520000473596&gt;]&gt;", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}}</msg>
+<msg time="2025-07-29T13:20:26.034062" level="DEBUG">{"message": "Server selection succeeded", "selector": "Primary()", "operation": "find", "topologyDescription": "&lt;TopologyDescription id: 6888ca980bd5f07c48dfc458, topology_type: ReplicaSetWithPrimary, servers: [&lt;ServerDescription ('ac-ybzd9ki-shard-00-00.hddhf8c.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.06769019999774173&gt;, &lt;ServerDescription ('ac-ybzd9ki-shard-00-01.hddhf8c.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.06611640000483021&gt;, &lt;ServerDescription ('ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net', 27017) server_type: RSPrimary, rtt: 0.06532520000473596&gt;]&gt;", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}, "serverHost": "ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net", "serverPort": 27017}</msg>
+<msg time="2025-07-29T13:20:26.034206" level="DEBUG">{"message": "Connection checkout started", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}, "serverHost": "ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net", "serverPort": 27017}</msg>
+<msg time="2025-07-29T13:20:26.034283" level="DEBUG">{"message": "Connection checked out", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}, "serverHost": "ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net", "serverPort": 27017, "driverConnectionId": 1, "durationMS": 7.900000491645187e-05}</msg>
+<msg time="2025-07-29T13:20:26.034435" level="DEBUG">{"message": "Command started", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}, "command": "{\"find\": \"users\", \"filter\": {\"_id\": \"507f1f77bcf86cd799439011\"}, \"limit\": 1, \"singleBatch\": true, \"lsid\": {\"id\": {\"$binary\": {\"base64\": \"Ok59vkixS8SkoCTIqrSPhw==\", \"subType\": \"04\"}}}, \"$clusterTime\": {\"clusterTime\": {\"$timestamp\": {\"t\": 1753795225, \"i\": 22}}, \"signature\": {\"hash\": {\"$binary\": {\"base64\": \"qEv8AmQou23rY+y8ZmVlaqeMcNg=\", \"subType\": \"00\"}}, \"keyId\": 7469800103226638348}}, \"$db\": \"fakeStoredb\"}", "commandName": "find", "databaseName": "fakeStoredb", "requestId": 16827, "operationId": 16827, "driverConnectionId": 1, "serverConnectionId": 588, "serverHost": "ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net", "serverPort": 27017}</msg>
+<msg time="2025-07-29T13:20:26.101133" level="DEBUG">{"message": "Command succeeded", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}, "durationMS": 66.653, "reply": "{\"cursor\": {\"ns\": \"fakeStoredb.users\"}, \"ok\": 1.0, \"$clusterTime\": {\"clusterTime\": {\"$timestamp\": {\"t\": 1753795225, \"i\": 29}}, \"signature\": {\"hash\": {\"$binary\": {\"base64\": \"qEv8AmQou23rY+y8ZmVlaqeMcNg=\", \"subType\": \"00\"}}, \"keyId\": 7469800103226638348}}, \"operationTime\": {\"$timestamp\": {\"t\": 1753795225, \"i\": 29}}}", "commandName": "find", "databaseName": "fakeStoredb", "requestId": 16827, "operationId": 16827, "driverConnectionId": 1, "serverConnectionId": 588, "serverHost": "ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net", "serverPort": 27017}</msg>
+<msg time="2025-07-29T13:20:26.101234" level="DEBUG">{"message": "Connection checked in", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}, "serverHost": "ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net", "serverPort": 27017, "driverConnectionId": 1}</msg>
+<msg time="2025-07-29T13:20:26.101739" level="INFO">${result} = None</msg>
+<var>${result}</var>
+<arg>507f1f77bcf86cd799439011</arg>
+<doc>Récupérer un utilisateur avec ID invalide - Scénario non passant</doc>
+<status status="PASS" start="2025-07-29T13:20:26.033602" elapsed="0.068163"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${result}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-07-29T13:20:26.102181" elapsed="0.000405"/>
+</kw>
+<doc>Test de récupération d'un utilisateur inexistant</doc>
+<tag>get</tag>
+<tag>invalid</tag>
+<tag>users</tag>
+<status status="PASS" start="2025-07-29T13:20:26.033245" elapsed="0.069578"/>
+</test>
+<test id="s1-t11" name="Authenticate User Test - Scenario Passant" line="103">
+<kw name="Authenticate User" owner="MongoDBKeywords">
+<msg time="2025-07-29T13:20:26.104493" level="DEBUG">{"message": "Server selection started", "selector": "Primary()", "operation": "find", "topologyDescription": "&lt;TopologyDescription id: 6888ca980bd5f07c48dfc458, topology_type: ReplicaSetWithPrimary, servers: [&lt;ServerDescription ('ac-ybzd9ki-shard-00-00.hddhf8c.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.06769019999774173&gt;, &lt;ServerDescription ('ac-ybzd9ki-shard-00-01.hddhf8c.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.06611640000483021&gt;, &lt;ServerDescription ('ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net', 27017) server_type: RSPrimary, rtt: 0.06532520000473596&gt;]&gt;", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}}</msg>
+<msg time="2025-07-29T13:20:26.104624" level="DEBUG">{"message": "Server selection succeeded", "selector": "Primary()", "operation": "find", "topologyDescription": "&lt;TopologyDescription id: 6888ca980bd5f07c48dfc458, topology_type: ReplicaSetWithPrimary, servers: [&lt;ServerDescription ('ac-ybzd9ki-shard-00-00.hddhf8c.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.06769019999774173&gt;, &lt;ServerDescription ('ac-ybzd9ki-shard-00-01.hddhf8c.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.06611640000483021&gt;, &lt;ServerDescription ('ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net', 27017) server_type: RSPrimary, rtt: 0.06532520000473596&gt;]&gt;", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}, "serverHost": "ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net", "serverPort": 27017}</msg>
+<msg time="2025-07-29T13:20:26.104691" level="DEBUG">{"message": "Connection checkout started", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}, "serverHost": "ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net", "serverPort": 27017}</msg>
+<msg time="2025-07-29T13:20:26.104763" level="DEBUG">{"message": "Connection checked out", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}, "serverHost": "ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net", "serverPort": 27017, "driverConnectionId": 1, "durationMS": 6.180000491440296e-05}</msg>
+<msg time="2025-07-29T13:20:26.104928" level="DEBUG">{"message": "Command started", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}, "command": "{\"find\": \"users\", \"filter\": {\"username\": \"ndiankou\", \"password\": \"password123\"}, \"limit\": 1, \"singleBatch\": true, \"lsid\": {\"id\": {\"$binary\": {\"base64\": \"Ok59vkixS8SkoCTIqrSPhw==\", \"subType\": \"04\"}}}, \"$clusterTime\": {\"clusterTime\": {\"$timestamp\": {\"t\": 1753795225, \"i\": 29}}, \"signature\": {\"hash\": {\"$binary\": {\"base64\": \"qEv8AmQou23rY+y8ZmVlaqeMcNg=\", \"subType\": \"00\"}}, \"keyId\": 7469800103226638348}}, \"$db\": \"fakeStoredb\"}", "commandName": "find", "databaseName": "fakeStoredb", "requestId": 9961, "operationId": 9961, "driverConnectionId": 1, "serverConnectionId": 588, "serverHost": "ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net", "serverPort": 27017}</msg>
+<msg time="2025-07-29T13:20:26.170665" level="DEBUG">{"message": "Command succeeded", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}, "durationMS": 65.665, "reply": "{\"cursor\": {\"firstBatch\": [{\"_id\": {\"$oid\": \"68881464fa769e501ac5e941\"}, \"firstname\": \"ndiankou\", \"lastname\": \"Ndoye\", \"email\": \"ndiankou.ndoye.test@example.com\", \"username\": \"ndiankou\", \"password\": \"password123\", \"phone\": \"+221771234567\", \"created_at\": {\"$date\": \"2025-07-29T00:23:00.801Z\"}, \"updated_at\": {\"$date\": \"2025-07-29T00:23:00.801Z\"}}], \"ns\": \"fakeStoredb.users\"}, \"ok\": 1.0, \"$clusterTime\": {\"clusterTime\": {\"$timestamp\": {\"t\": 1753795225, \"i\": 30}}, \"signature\": {\"hash\": {\"$binary\": {\"base64\": \"qEv8AmQou23rY+y8ZmVlaqeMcNg=\", \"subType\": \"00\"}}, \"keyId\": 7469800103226638348}}, \"operationTime\": {\"$timestamp\": {\"t\": 1753795225, \"i\": 30}}}", "commandName": "find", "databaseName": "fakeStoredb", "requestId": 9961, "operationId": 9961, "driverConnectionId": 1, "serverConnectionId": 588, "serverHost": "ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net", "serverPort": 27017}</msg>
+<msg time="2025-07-29T13:20:26.170763" level="DEBUG">{"message": "Connection checked in", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}, "serverHost": "ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net", "serverPort": 27017, "driverConnectionId": 1}</msg>
+<msg time="2025-07-29T13:20:26.171178" level="INFO">${token} = {'_id': '68881464fa769e501ac5e941', 'firstname': 'ndiankou', 'lastname': 'Ndoye', 'email': 'ndiankou.ndoye.test@example.com', 'username': 'ndiankou', 'password': 'password123', 'phone': '+221771234567...</msg>
+<var>${token}</var>
+<arg>${VALID_USER_USERNAME}</arg>
+<arg>${VALID_USER_PASSWORD}</arg>
+<doc>Authentifier un utilisateur - Scénario passant</doc>
+<status status="PASS" start="2025-07-29T13:20:26.104074" elapsed="0.067130"/>
+</kw>
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<msg time="2025-07-29T13:20:26.171653" level="INFO">Length is 9.</msg>
+<arg>${token}</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="PASS" start="2025-07-29T13:20:26.171520" elapsed="0.000196"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Authentification réussie pour l'utilisateur: ${VALID_USER_USERNAME}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-07-29T13:20:26.171988" elapsed="0.000472"/>
+</kw>
+<doc>Test de l'authentification d'un utilisateur avec des données valides</doc>
+<tag>authenticate</tag>
+<tag>users</tag>
+<tag>valid</tag>
+<status status="PASS" start="2025-07-29T13:20:26.103612" elapsed="0.069118"/>
+</test>
+<kw name="Close Mongodb Connection" owner="MongoDBKeywords" type="TEARDOWN">
+<msg time="2025-07-29T13:20:26.173893" level="DEBUG">{"message": "Server selection started", "selector": "PrimaryPreferred(tag_sets=None, max_staleness=-1, hedge=None)", "operation": "endSessions", "topologyDescription": "&lt;TopologyDescription id: 6888ca980bd5f07c48dfc458, topology_type: ReplicaSetWithPrimary, servers: [&lt;ServerDescription ('ac-ybzd9ki-shard-00-00.hddhf8c.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.06769019999774173&gt;, &lt;ServerDescription ('ac-ybzd9ki-shard-00-01.hddhf8c.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.06611640000483021&gt;, &lt;ServerDescription ('ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net', 27017) server_type: RSPrimary, rtt: 0.06532520000473596&gt;]&gt;", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}}</msg>
+<msg time="2025-07-29T13:20:26.174307" level="DEBUG">{"message": "Server selection succeeded", "selector": "PrimaryPreferred(tag_sets=None, max_staleness=-1, hedge=None)", "operation": "endSessions", "topologyDescription": "&lt;TopologyDescription id: 6888ca980bd5f07c48dfc458, topology_type: ReplicaSetWithPrimary, servers: [&lt;ServerDescription ('ac-ybzd9ki-shard-00-00.hddhf8c.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.06769019999774173&gt;, &lt;ServerDescription ('ac-ybzd9ki-shard-00-01.hddhf8c.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.06611640000483021&gt;, &lt;ServerDescription ('ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net', 27017) server_type: RSPrimary, rtt: 0.06532520000473596&gt;]&gt;", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}, "serverHost": "ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net", "serverPort": 27017}</msg>
+<msg time="2025-07-29T13:20:26.174495" level="DEBUG">{"message": "Connection checkout started", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}, "serverHost": "ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net", "serverPort": 27017}</msg>
+<msg time="2025-07-29T13:20:26.174580" level="DEBUG">{"message": "Connection checked out", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}, "serverHost": "ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net", "serverPort": 27017, "driverConnectionId": 1, "durationMS": 0.00011240001185797155}</msg>
+<msg time="2025-07-29T13:20:26.174720" level="DEBUG">{"message": "Command started", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}, "command": "{\"endSessions\": [{\"id\": {\"$binary\": {\"base64\": \"Ok59vkixS8SkoCTIqrSPhw==\", \"subType\": \"04\"}}}], \"$clusterTime\": {\"clusterTime\": {\"$timestamp\": {\"t\": 1753795225, \"i\": 30}}, \"signature\": {\"hash\": {\"$binary\": {\"base64\": \"qEv8AmQou23rY+y8ZmVlaqeMcNg=\", \"subType\": \"00\"}}, \"keyId\": 7469800103226638348}}, \"$db\": \"admin\", \"$readPreference\": {\"mode\": \"primaryPreferred\"}}", "commandName": "endSessions", "databaseName": "admin", "requestId": 491, "operationId": 491, "driverConnectionId": 1, "serverConnectionId": 588, "serverHost": "ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net", "serverPort": 27017}</msg>
+<msg time="2025-07-29T13:20:26.243935" level="DEBUG">{"message": "Command succeeded", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}, "durationMS": 69.152, "reply": "{\"ok\": 1.0, \"$clusterTime\": {\"clusterTime\": {\"$timestamp\": {\"t\": 1753795225, \"i\": 34}}, \"signature\": {\"hash\": {\"$binary\": {\"base64\": \"qEv8AmQou23rY+y8ZmVlaqeMcNg=\", \"subType\": \"00\"}}, \"keyId\": 7469800103226638348}}, \"operationTime\": {\"$timestamp\": {\"t\": 1753795225, \"i\": 34}}}", "commandName": "endSessions", "databaseName": "admin", "requestId": 491, "operationId": 491, "driverConnectionId": 1, "serverConnectionId": 588, "serverHost": "ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net", "serverPort": 27017}</msg>
+<msg time="2025-07-29T13:20:26.244034" level="DEBUG">{"message": "Connection checked in", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}, "serverHost": "ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net", "serverPort": 27017, "driverConnectionId": 1}</msg>
+<msg time="2025-07-29T13:20:26.244109" level="DEBUG">{"message": "Stopped server monitoring", "topologyId": {"$oid": "6888ca980bd5f07c48dfc458"}, "serverHost": "ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net", "serverPort": 27017}</msg>
+<msg time="2025-07-29T13:20:26.244434" level="DEBUG">{"message": "Connection closed", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}, "serverHost": "ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net", "serverPort": 27017, "driverConnectionId": 1, "reason": "Connection pool was closed", "error": "poolClosed"}</msg>
+<msg time="2025-07-29T13:20:26.244508" level="DEBUG">{"message": "Connection pool closed", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}, "serverHost": "ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net", "serverPort": 27017}</msg>
+<msg time="2025-07-29T13:20:26.244558" level="DEBUG">{"message": "Stopped server monitoring", "topologyId": {"$oid": "6888ca980bd5f07c48dfc458"}, "serverHost": "ac-ybzd9ki-shard-00-01.hddhf8c.mongodb.net", "serverPort": 27017}</msg>
+<msg time="2025-07-29T13:20:26.244704" level="DEBUG">{"message": "Connection pool closed", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}, "serverHost": "ac-ybzd9ki-shard-00-01.hddhf8c.mongodb.net", "serverPort": 27017}</msg>
+<msg time="2025-07-29T13:20:26.244750" level="DEBUG">{"message": "Stopped server monitoring", "topologyId": {"$oid": "6888ca980bd5f07c48dfc458"}, "serverHost": "ac-ybzd9ki-shard-00-00.hddhf8c.mongodb.net", "serverPort": 27017}</msg>
+<msg time="2025-07-29T13:20:26.244861" level="DEBUG">{"message": "Connection pool closed", "clientId": {"$oid": "6888ca980bd5f07c48dfc458"}, "serverHost": "ac-ybzd9ki-shard-00-00.hddhf8c.mongodb.net", "serverPort": 27017}</msg>
+<msg time="2025-07-29T13:20:26.244972" level="DEBUG">{"message": "Topology description changed", "topologyId": {"$oid": "6888ca980bd5f07c48dfc458"}, "previousDescription": "&lt;TopologyDescription id: 6888ca980bd5f07c48dfc458, topology_type: ReplicaSetWithPrimary, servers: [&lt;ServerDescription ('ac-ybzd9ki-shard-00-00.hddhf8c.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.06769019999774173&gt;, &lt;ServerDescription ('ac-ybzd9ki-shard-00-01.hddhf8c.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.06611640000483021&gt;, &lt;ServerDescription ('ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net', 27017) server_type: RSPrimary, rtt: 0.06532520000473596&gt;]&gt;", "newDescription": "&lt;TopologyDescription id: 6888ca980bd5f07c48dfc458, topology_type: ReplicaSetNoPrimary, servers: [&lt;ServerDescription ('ac-ybzd9ki-shard-00-00.hddhf8c.mongodb.net', 27017) server_type: Unknown, rtt: None&gt;, &lt;ServerDescription ('ac-ybzd9ki-shard-00-01.hddhf8c.mongodb.net', 27017) server_type: Unknown, rtt: None&gt;, &lt;ServerDescription ('ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net', 27017) server_type: Unknown, rtt: None&gt;]&gt;"}</msg>
+<msg time="2025-07-29T13:20:26.245016" level="DEBUG">{"message": "Stopped topology monitoring", "topologyId": {"$oid": "6888ca980bd5f07c48dfc458"}}</msg>
+<doc>Fermer la connexion MongoDB</doc>
+<status status="PASS" start="2025-07-29T13:20:26.173640" elapsed="0.071865"/>
+</kw>
+<status status="PASS" start="2025-07-29T13:20:24.064551" elapsed="2.180999"/>
+</suite>
+<statistics>
+<total>
+<stat pass="11" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">authenticate</stat>
+<stat pass="1" fail="0" skip="0">delete</stat>
+<stat pass="3" fail="0" skip="0">get</stat>
+<stat pass="3" fail="0" skip="0">insert</stat>
+<stat pass="6" fail="0" skip="0">invalid</stat>
+<stat pass="3" fail="0" skip="0">update</stat>
+<stat pass="11" fail="0" skip="0">users</stat>
+<stat pass="5" fail="0" skip="0">valid</stat>
+</tag>
+<suite>
+<stat name="User Test" id="s1" pass="11" fail="0" skip="0">User Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

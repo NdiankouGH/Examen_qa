@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.2 on win32)" generated="2025-07-29T13:25:08.092496" rpa="false" schemaversion="5">
+<suite id="s1" name="User Test" source="H:\Github\examen_jee\qa_test\lab1\tests\user_test.robot">
+<kw name="Connect To Mongodb Atlas" owner="MongoDBKeywords" type="SETUP">
+<msg time="2025-07-29T13:25:09.096272" level="INFO">${MONGODB_CLIENT} = MongoClient(host=['ac-ybzd9ki-shard-00-00.hddhf8c.mongodb.net:27017', 'ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net:27017', 'ac-ybzd9ki-shard-00-01.hddhf8c.mongodb.net:27017'], document_class=dict, tz_a...</msg>
+<msg time="2025-07-29T13:25:09.097813" level="INFO">${MONGODB_DATABASE} = Database(MongoClient(host=['ac-ybzd9ki-shard-00-00.hddhf8c.mongodb.net:27017', 'ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net:27017', 'ac-ybzd9ki-shard-00-01.hddhf8c.mongodb.net:27017'], document_class=d...</msg>
+<arg>${MONGO_URI}</arg>
+<arg>${DB_NAME}</arg>
+<doc>Connexion à MongoDB Atlas</doc>
+<status status="PASS" start="2025-07-29T13:25:08.204321" elapsed="0.893638"/>
+</kw>
+<test id="s1-t1" name="Authenticate User With Nonexistent User Test - Scénario Non Passant" line="116">
+<kw name="Run Keyword And Expect Error" owner="BuiltIn">
+<kw name="Authenticate User" owner="MongoDBKeywords">
+<msg time="2025-07-29T13:25:09.165516" level="FAIL">Échec authentification utilisateur: Échec de l'authentification: utilisateur ou mot de passe incorrect</msg>
+<arg>nonexistent_user</arg>
+<arg>${VALID_USER_PASSWORD}</arg>
+<doc>Authentifier un utilisateur - Scénario passant</doc>
+<status status="FAIL" start="2025-07-29T13:25:09.099138" elapsed="0.067476">Échec authentification utilisateur: Échec de l'authentification: utilisateur ou mot de passe incorrect</status>
+</kw>
+<arg>*Échec de l'authentification*</arg>
+<arg>Authenticate User</arg>
+<arg>nonexistent_user</arg>
+<arg>${VALID_USER_PASSWORD}</arg>
+<doc>Runs the keyword and checks that the expected error occurred.</doc>
+<status status="PASS" start="2025-07-29T13:25:09.098703" elapsed="0.068225"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Échec d'authentification attendu pour un utilisateur inexistant</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-07-29T13:25:09.167093" elapsed="0.000212"/>
+</kw>
+<doc>Test de l'authentification d'un utilisateur inexistant</doc>
+<tag>authenticate</tag>
+<tag>invalid</tag>
+<tag>users</tag>
+<status status="PASS" start="2025-07-29T13:25:09.098145" elapsed="0.069292"/>
+</test>
+<kw name="Close Mongodb Connection" owner="MongoDBKeywords" type="TEARDOWN">
+<doc>Fermer la connexion MongoDB</doc>
+<status status="PASS" start="2025-07-29T13:25:09.167879" elapsed="0.067099"/>
+</kw>
+<status status="PASS" start="2025-07-29T13:25:08.102918" elapsed="1.132182"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">authenticate</stat>
+<stat pass="1" fail="0" skip="0">invalid</stat>
+<stat pass="1" fail="0" skip="0">users</stat>
+</tag>
+<suite>
+<stat name="User Test" id="s1" pass="1" fail="0" skip="0">User Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
