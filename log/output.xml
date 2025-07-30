@@ -1,60 +1,256 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.13.2 on win32)" generated="2025-07-29T13:25:08.092496" rpa="false" schemaversion="5">
-<suite id="s1" name="User Test" source="H:\Github\examen_jee\qa_test\lab1\tests\user_test.robot">
-<kw name="Connect To Mongodb Atlas" owner="MongoDBKeywords" type="SETUP">
-<msg time="2025-07-29T13:25:09.096272" level="INFO">${MONGODB_CLIENT} = MongoClient(host=['ac-ybzd9ki-shard-00-00.hddhf8c.mongodb.net:27017', 'ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net:27017', 'ac-ybzd9ki-shard-00-01.hddhf8c.mongodb.net:27017'], document_class=dict, tz_a...</msg>
-<msg time="2025-07-29T13:25:09.097813" level="INFO">${MONGODB_DATABASE} = Database(MongoClient(host=['ac-ybzd9ki-shard-00-00.hddhf8c.mongodb.net:27017', 'ac-ybzd9ki-shard-00-02.hddhf8c.mongodb.net:27017', 'ac-ybzd9ki-shard-00-01.hddhf8c.mongodb.net:27017'], document_class=d...</msg>
-<arg>${MONGO_URI}</arg>
-<arg>${DB_NAME}</arg>
-<doc>Connexion à MongoDB Atlas</doc>
-<status status="PASS" start="2025-07-29T13:25:08.204321" elapsed="0.893638"/>
+<robot generator="Robot 7.3.2 (Python 3.13.2 on win32)" generated="2025-07-30T00:42:26.180947" rpa="false" schemaversion="5">
+<suite id="s1" name="Test Case" source="H:\Github\examen_jee\qa_test\lab4\tests\test_case.robot">
+<test id="s1-t1" name="Test de création de produit" line="16">
+<kw name="Ouvrir l'application" owner="keyword">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>http://127.0.0.1:4723</arg>
+<arg>automationName=UiAutomator2</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=sdk_gphone64_x86_64</arg>
+<arg>app=${EXECDIR}/looma.apk</arg>
+<arg>noReset=true</arg>
+<arg>strict_ssl=false</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.1/cli/args/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" start="2025-07-30T00:42:26.457851" elapsed="3.112828"/>
 </kw>
-<test id="s1-t1" name="Authenticate User With Nonexistent User Test - Scénario Non Passant" line="116">
-<kw name="Run Keyword And Expect Error" owner="BuiltIn">
-<kw name="Authenticate User" owner="MongoDBKeywords">
-<msg time="2025-07-29T13:25:09.165516" level="FAIL">Échec authentification utilisateur: Échec de l'authentification: utilisateur ou mot de passe incorrect</msg>
-<arg>nonexistent_user</arg>
-<arg>${VALID_USER_PASSWORD}</arg>
-<doc>Authentifier un utilisateur - Scénario passant</doc>
-<status status="FAIL" start="2025-07-29T13:25:09.099138" elapsed="0.067476">Échec authentification utilisateur: Échec de l'authentification: utilisateur ou mot de passe incorrect</status>
+<doc>Lance l'application avec Appium</doc>
+<status status="PASS" start="2025-07-30T00:42:26.457301" elapsed="3.113586"/>
 </kw>
-<arg>*Échec de l'authentification*</arg>
-<arg>Authenticate User</arg>
-<arg>nonexistent_user</arg>
-<arg>${VALID_USER_PASSWORD}</arg>
-<doc>Runs the keyword and checks that the expected error occurred.</doc>
-<status status="PASS" start="2025-07-29T13:25:09.098703" elapsed="0.068225"/>
+<kw name="Vérifier la page de connexion" owner="keyword">
+<kw name="Attendre que l'élément soit visible" owner="keyword">
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<arg>${locator}</arg>
+<arg>${timeout}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2025-07-30T00:42:29.571608" elapsed="0.041483"/>
 </kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>Échec d'authentification attendu pour un utilisateur inexistant</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-07-29T13:25:09.167093" elapsed="0.000212"/>
+<arg>${TITLE}</arg>
+<status status="PASS" start="2025-07-30T00:42:29.571351" elapsed="0.041905"/>
 </kw>
-<doc>Test de l'authentification d'un utilisateur inexistant</doc>
-<tag>authenticate</tag>
-<tag>invalid</tag>
-<tag>users</tag>
-<status status="PASS" start="2025-07-29T13:25:09.098145" elapsed="0.069292"/>
+<kw name="Page Should Contain Element" owner="AppiumLibrary">
+<msg time="2025-07-30T00:42:29.916498" level="INFO">Current page contains element '//android.widget.EditText[@hint="Nom d'utilisateur"]'.</msg>
+<msg time="2025-07-30T00:42:29.917440" level="INFO">xpath criteria: //android.widget.EditText[@hint="Nom d'utilisateur"]</msg>
+<arg>${USERNAME_FIELD}</arg>
+<doc>Verifies that current page contains `locator` element.</doc>
+<status status="PASS" start="2025-07-30T00:42:29.613420" elapsed="0.304121"/>
+</kw>
+<kw name="Page Should Contain Element" owner="AppiumLibrary">
+<msg time="2025-07-30T00:42:29.941963" level="INFO">Current page contains element '//android.widget.EditText[@hint="Mot de passe"]'.</msg>
+<msg time="2025-07-30T00:42:29.942116" level="INFO">xpath criteria: //android.widget.EditText[@hint="Mot de passe"]</msg>
+<arg>${PASSWORD_FIELD}</arg>
+<doc>Verifies that current page contains `locator` element.</doc>
+<status status="PASS" start="2025-07-30T00:42:29.917680" elapsed="0.024502"/>
+</kw>
+<kw name="Page Should Contain Element" owner="AppiumLibrary">
+<msg time="2025-07-30T00:42:29.957646" level="INFO">Current page contains element 'accessibility_id=Se connecter'.</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Verifies that current page contains `locator` element.</doc>
+<status status="PASS" start="2025-07-30T00:42:29.942318" elapsed="0.015491"/>
+</kw>
+<doc>Vérifie que la page de connexion est affichée</doc>
+<status status="PASS" start="2025-07-30T00:42:29.571076" elapsed="0.386836"/>
+</kw>
+<kw name="Saisir les identifiants" owner="keyword">
+<kw name="Attendre que l'élément soit visible" owner="keyword">
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2025-07-30T00:42:29.983147" level="INFO">xpath criteria: //android.widget.EditText[@hint="Nom d'utilisateur"]</msg>
+<arg>${locator}</arg>
+<arg>${timeout}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2025-07-30T00:42:29.958587" elapsed="0.024713"/>
+</kw>
+<arg>${USERNAME_FIELD}</arg>
+<status status="PASS" start="2025-07-30T00:42:29.958355" elapsed="0.025046"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-07-30T00:42:29.984396" level="INFO">Clicking element '//android.widget.EditText[@hint="Nom d'utilisateur"]'.</msg>
+<msg time="2025-07-30T00:42:30.092488" level="INFO">xpath criteria: //android.widget.EditText[@hint="Nom d'utilisateur"]</msg>
+<arg>${USERNAME_FIELD}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-07-30T00:42:29.983519" elapsed="0.109127"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2025-07-30T00:42:30.093674" level="INFO">Typing text 'johnd' into text field '//android.widget.EditText[@hint="Nom d'utilisateur"]'</msg>
+<msg time="2025-07-30T00:42:30.136092" level="INFO">xpath criteria: //android.widget.EditText[@hint="Nom d'utilisateur"]</msg>
+<arg>${USERNAME_FIELD}</arg>
+<arg>${username}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2025-07-30T00:42:30.092788" elapsed="0.043469"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-07-30T00:42:30.137287" level="INFO">Clicking element '//android.widget.EditText[@hint="Mot de passe"]'.</msg>
+<msg time="2025-07-30T00:42:31.475352" level="INFO">xpath criteria: //android.widget.EditText[@hint="Mot de passe"]</msg>
+<arg>${PASSWORD_FIELD}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-07-30T00:42:30.136406" elapsed="1.339078"/>
+</kw>
+<kw name="Input Password" owner="AppiumLibrary">
+<msg time="2025-07-30T00:42:31.476427" level="INFO">Typing password into text field '//android.widget.EditText[@hint="Mot de passe"]'</msg>
+<msg time="2025-07-30T00:42:31.527476" level="INFO">xpath criteria: //android.widget.EditText[@hint="Mot de passe"]</msg>
+<arg>${PASSWORD_FIELD}</arg>
+<arg>${password}</arg>
+<doc>Types the given password into text field identified by `locator`.</doc>
+<status status="PASS" start="2025-07-30T00:42:31.475612" elapsed="0.052021"/>
+</kw>
+<arg>johnd</arg>
+<arg>m38rmF$</arg>
+<doc>Saisit le nom d'utilisateur et le mot de passe</doc>
+<status status="PASS" start="2025-07-30T00:42:29.958084" elapsed="1.569648"/>
+</kw>
+<kw name="Cliquer sur le bouton de connexion" owner="keyword">
+<kw name="Attendre que l'élément soit visible" owner="keyword">
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<arg>${locator}</arg>
+<arg>${timeout}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2025-07-30T00:42:31.528414" elapsed="0.021676"/>
+</kw>
+<arg>${LOGIN_BUTTON}</arg>
+<status status="PASS" start="2025-07-30T00:42:31.528182" elapsed="0.022052"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-07-30T00:42:31.551174" level="INFO">Clicking element 'accessibility_id=Se connecter'.</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-07-30T00:42:31.550352" elapsed="1.923298"/>
+</kw>
+<doc>Clique sur le bouton de connexion</doc>
+<status status="PASS" start="2025-07-30T00:42:31.527899" elapsed="1.945886"/>
+</kw>
+<kw name="Vérifier la connexion réussie" owner="keyword">
+<kw name="Wait Until Page Contains" owner="AppiumLibrary">
+<arg>Ajouter un produit</arg>
+<arg>10s</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" start="2025-07-30T00:42:33.474155" elapsed="0.034728"/>
+</kw>
+<status status="PASS" start="2025-07-30T00:42:33.473940" elapsed="0.035122"/>
+</kw>
+<kw name="Saisir le titre du produit" owner="keyword">
+<kw name="Attendre que l'élément soit visible" owner="keyword">
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2025-07-30T00:42:33.544142" level="INFO">xpath criteria: //android.widget.EditText[@hint="Titre"]</msg>
+<arg>${locator}</arg>
+<arg>${timeout}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2025-07-30T00:42:33.509818" elapsed="0.034496"/>
+</kw>
+<arg>${TITLE_FIELD}</arg>
+<status status="PASS" start="2025-07-30T00:42:33.509572" elapsed="0.034849"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-07-30T00:42:33.545594" level="INFO">Clicking element '//android.widget.EditText[@hint="Titre"]'.</msg>
+<kw name="Capture Page Screenshot" owner="AppiumLibrary">
+<msg time="2025-07-30T00:42:34.260173" level="FAIL">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: 'GET /screenshot' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: 'GET /screenshot' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+    at UIA2Proxy.command (C:\Users\pc\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:359:13)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at AndroidUiautomator2Driver.getScreenshot (C:\Users\pc\.appium\node_modules\appium-uiautomator2-driver\lib\commands\screenshot.js:42:5)</msg>
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<status status="FAIL" start="2025-07-30T00:42:34.256519" elapsed="0.011063">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: 'GET /screenshot' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: 'GET /screenshot' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+    at UIA2Proxy.command (C:\Users\pc\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:359:13)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at AndroidUiautomator2Driver.getScreenshot (C:\Users\pc\.appium\node_modules\appium-uiautomator2-driver\lib\commands\screenshot.js:42:5)</status>
+</kw>
+<msg time="2025-07-30T00:42:34.268562" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: 'GET /screenshot' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: 'GET /screenshot' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+    at UIA2Proxy.command (C:\Users\pc\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:359:13)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at AndroidUiautomator2Driver.getScreenshot (C:\Users\pc\.appium\node_modules\appium-uiautomator2-driver\lib\commands\screenshot.js:42:5)</msg>
+<msg time="2025-07-30T00:42:34.268905" level="INFO">xpath criteria: //android.widget.EditText[@hint="Titre"]</msg>
+<msg time="2025-07-30T00:42:34.269089" level="FAIL">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+    at UIA2Proxy.command (C:\Users\pc\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:359:13)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at AndroidUiautomator2Driver.click (C:\Users\pc\.appium\node_modules\appium-uiautomator2-driver\lib\commands\element.js:158:3)</msg>
+<arg>${TITLE_FIELD}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="FAIL" start="2025-07-30T00:42:33.544675" elapsed="0.725787">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+    at UIA2Proxy.command (C:\Users\pc\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:359:13)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at AndroidUiautomator2Driver.click (C:\Users\pc\.appium\node_modules\appium-uiautomator2-driver\lib\commands\element.js:158:3)</status>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<arg>${TITLE_FIELD}</arg>
+<arg>${title}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="NOT RUN" start="2025-07-30T00:42:34.270699" elapsed="0.000094"/>
+</kw>
+<arg>Test Product</arg>
+<status status="FAIL" start="2025-07-30T00:42:33.509259" elapsed="0.761686">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+    at UIA2Proxy.command (C:\Users\pc\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:359:13)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at AndroidUiautomator2Driver.click (C:\Users\pc\.appium\node_modules\appium-uiautomator2-driver\lib\commands\element.js:158:3)</status>
+</kw>
+<kw name="Saisir le prix du produit" owner="keyword">
+<arg>1000.00</arg>
+<status status="NOT RUN" start="2025-07-30T00:42:34.271155" elapsed="0.000087"/>
+</kw>
+<kw name="Saisir la description du produit" owner="keyword">
+<arg>Ceci est une description du produit de test.</arg>
+<status status="NOT RUN" start="2025-07-30T00:42:34.271364" elapsed="0.000065"/>
+</kw>
+<kw name="Saisir la catégorie du produit" owner="keyword">
+<arg>Catégorie du produit</arg>
+<status status="NOT RUN" start="2025-07-30T00:42:34.271543" elapsed="0.000074"/>
+</kw>
+<kw name="Saisir l'uRL de l'image du produit" owner="keyword">
+<arg>https://example.com/image.jpg</arg>
+<status status="NOT RUN" start="2025-07-30T00:42:34.271722" elapsed="0.000059"/>
+</kw>
+<kw name="Cliquer sur le button ajouter" owner="keyword">
+<status status="NOT RUN" start="2025-07-30T00:42:34.271880" elapsed="0.000055"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-07-30T00:42:34.272020" elapsed="0.000059"/>
+</kw>
+<kw name="Rechercher le produit" owner="keyword">
+<status status="NOT RUN" start="2025-07-30T00:42:34.272189" elapsed="0.000051"/>
+</kw>
+<doc>Test de création d'un produit avec des données valides</doc>
+<status status="FAIL" start="2025-07-30T00:42:26.456683" elapsed="7.815716">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+    at UIA2Proxy.command (C:\Users\pc\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:359:13)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at AndroidUiautomator2Driver.click (C:\Users\pc\.appium\node_modules\appium-uiautomator2-driver\lib\commands\element.js:158:3)</status>
 </test>
-<kw name="Close Mongodb Connection" owner="MongoDBKeywords" type="TEARDOWN">
-<doc>Fermer la connexion MongoDB</doc>
-<status status="PASS" start="2025-07-29T13:25:09.167879" elapsed="0.067099"/>
-</kw>
-<status status="PASS" start="2025-07-29T13:25:08.102918" elapsed="1.132182"/>
+<status status="FAIL" start="2025-07-30T00:42:26.194362" elapsed="8.078778"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">authenticate</stat>
-<stat pass="1" fail="0" skip="0">invalid</stat>
-<stat pass="1" fail="0" skip="0">users</stat>
 </tag>
 <suite>
-<stat name="User Test" id="s1" pass="1" fail="0" skip="0">User Test</stat>
+<stat name="Test Case" id="s1" pass="0" fail="1" skip="0">Test Case</stat>
 </suite>
 </statistics>
 <errors>
+<msg time="2025-07-30T00:42:34.268562" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: 'GET /screenshot' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: 'GET /screenshot' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+    at UIA2Proxy.command (C:\Users\pc\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\jsonwp-proxy\proxy.js:359:13)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at AndroidUiautomator2Driver.getScreenshot (C:\Users\pc\.appium\node_modules\appium-uiautomator2-driver\lib\commands\screenshot.js:42:5)</msg>
 </errors>
 </robot>

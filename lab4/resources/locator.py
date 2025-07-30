@@ -1,0 +1,12 @@
+USERNAME_FIELD=     "//android.widget.EditText[@hint=\"Nom d'utilisateur\"]"
+PASSWORD_FIELD=     "//android.widget.EditText[@hint=\"Mot de passe\"]"
+LOGIN_BUTTON=      "accessibility_id=Se connecter"
+TITLE=           "accessibility_id=Connexion"
+TITLE_FIELD=        "//android.widget.EditText[@hint=\"Titre\"]"
+DESCRIPTION_FIELD=    "//android.widget.EditText[@hint=\"Description\"]"
+CATEGORY_FIELD=       "//android.widget.EditText[@hint=\"Catégorie\"]"
+PRICE_FIELD=        "//android.widget.EditText[@hint=\"Prix\"]"
+IMAGE_FIELD=        "//android.widget.EditText[@hint=\"Image URL\"]"
+ADD_BUTTON=        "accessibility_id=Ajouter"
+
+PRODUCT_SEARCH_FIELD=       "Mens Cotton Jacket\n55.99 $"

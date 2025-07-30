@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.2 on win32)" generated="2025-07-30T00:02:42.031670" rpa="false" schemaversion="5">
+<suite id="s1" name="Test Case" source="h:\Github\examen_jee\qa_test\lab4\tests\test_case.robot">
+<test id="s1-t1" name="Test de création de produit" line="16">
+<kw name="Ouvrir l'application" owner="keyword">
+<kw name="Open Application" owner="AppiumLibrary">
+<kw name="Capture Page Screenshot" owner="AppiumLibrary">
+<msg time="2025-07-30T00:02:55.039800" level="FAIL">No application is open</msg>
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<status status="FAIL" start="2025-07-30T00:02:55.039248" elapsed="0.010502">No application is open</status>
+</kw>
+<msg time="2025-07-30T00:02:55.051813" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg time="2025-07-30T00:02:55.053262" level="FAIL">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: The instrumentation process cannot be initialized. Make sure the application under test does not crash and investigate the logcat output.
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: The instrumentation process cannot be initialized. Make sure the application under test does not crash and investigate the logcat output.
+    at getResponseForW3CError (C:\Users\pc\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\errors.js:1143:9)
+    at asyncHandler (C:\Users\pc\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:487:57)</msg>
+<arg>http://127.0.0.1:4723</arg>
+<arg>automationName=UiAutomator2</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=sdk_gphone64_x86_64</arg>
+<arg>app=${EXECDIR}/looma.apk</arg>
+<arg>noReset=true</arg>
+<arg>strict_ssl=false</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.1/cli/args/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="FAIL" start="2025-07-30T00:02:42.242244" elapsed="12.814625">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: The instrumentation process cannot be initialized. Make sure the application under test does not crash and investigate the logcat output.
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: The instrumentation process cannot be initialized. Make sure the application under test does not crash and investigate the logcat output.
+    at getResponseForW3CError (C:\Users\pc\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\errors.js:1143:9)
+    at asyncHandler (C:\Users\pc\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:487:57)</status>
+</kw>
+<doc>Lance l'application avec Appium</doc>
+<status status="FAIL" start="2025-07-30T00:02:42.241366" elapsed="12.816049">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: The instrumentation process cannot be initialized. Make sure the application under test does not crash and investigate the logcat output.
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: The instrumentation process cannot be initialized. Make sure the application under test does not crash and investigate the logcat output.
+    at getResponseForW3CError (C:\Users\pc\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\errors.js:1143:9)
+    at asyncHandler (C:\Users\pc\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:487:57)</status>
+</kw>
+<kw name="Vérifier la page de connexion" owner="keyword">
+<doc>Vérifie que la page de connexion est affichée</doc>
+<status status="NOT RUN" start="2025-07-30T00:02:55.058264" elapsed="0.000147"/>
+</kw>
+<kw name="Saisir les identifiants" owner="keyword">
+<arg>johnd</arg>
+<arg>m38rmF$</arg>
+<doc>Saisit le nom d'utilisateur et le mot de passe</doc>
+<status status="NOT RUN" start="2025-07-30T00:02:55.059271" elapsed="0.000314"/>
+</kw>
+<kw name="Cliquer sur le bouton de connexion" owner="keyword">
+<doc>Clique sur le bouton de connexion</doc>
+<status status="NOT RUN" start="2025-07-30T00:02:55.060274" elapsed="0.000193"/>
+</kw>
+<kw name="Vérifier la connexion réussie" owner="keyword">
+<status status="NOT RUN" start="2025-07-30T00:02:55.061253" elapsed="0.000203"/>
+</kw>
+<kw name="Saisir le titre du produit" owner="keyword">
+<arg>Test Product</arg>
+<status status="NOT RUN" start="2025-07-30T00:02:55.062109" elapsed="0.000162"/>
+</kw>
+<kw name="Saisir le prix du produit" owner="keyword">
+<arg>1000.00</arg>
+<status status="NOT RUN" start="2025-07-30T00:02:55.062941" elapsed="0.000204"/>
+</kw>
+<kw name="Saisir la description du produit" owner="keyword">
+<arg>Ceci est une description du produit de test.</arg>
+<status status="NOT RUN" start="2025-07-30T00:02:55.063801" elapsed="0.000220"/>
+</kw>
+<kw name="Saisir la catégorie du produit" owner="keyword">
+<arg>Catégorie du produit</arg>
+<status status="NOT RUN" start="2025-07-30T00:02:55.064981" elapsed="0.000223"/>
+</kw>
+<kw name="Saisir l'uRL de l'image du produit" owner="keyword">
+<arg>https://example.com/image.jpg</arg>
+<status status="NOT RUN" start="2025-07-30T00:02:55.066116" elapsed="0.000131"/>
+</kw>
+<kw name="Cliquer sur le button ajouter" owner="keyword">
+<status status="NOT RUN" start="2025-07-30T00:02:55.066884" elapsed="0.000283"/>
+</kw>
+<kw name="Attendre que l'élément soit visible" owner="keyword">
+<arg>Mens Cotton Jacket</arg>
+<status status="NOT RUN" start="2025-07-30T00:02:55.067782" elapsed="0.000137"/>
+</kw>
+<doc>Test de création d'un produit avec des données valides</doc>
+<status status="FAIL" start="2025-07-30T00:02:42.240356" elapsed="12.828207">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: The instrumentation process cannot be initialized. Make sure the application under test does not crash and investigate the logcat output.
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: The instrumentation process cannot be initialized. Make sure the application under test does not crash and investigate the logcat output.
+    at getResponseForW3CError (C:\Users\pc\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\errors.js:1143:9)
+    at asyncHandler (C:\Users\pc\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:487:57)</status>
+</test>
+<status status="FAIL" start="2025-07-30T00:02:42.036058" elapsed="13.034876"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Test Case" id="s1" pass="0" fail="1" skip="0">Test Case</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-07-30T00:02:55.051813" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+</errors>
+</robot>
