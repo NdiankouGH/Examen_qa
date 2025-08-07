@@ -5,32 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="563de6cf-df3b-4c1d-be0e-3c8239b8829e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/lab3/id_1001/keywords1.robot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab3/id_1001/test_case1.robot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab3/id_1002/keywords2.robot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab3/id_1002/test_case2.robot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab3/id_1003/keywords3.robot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab3/id_1003/test_case3.robot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab3/id_1004/keywords3.robot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab3/id_1004/test_case3.robot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab3/id_1005/keywords3.robot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab3/id_1005/test_case3.robot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab3/id_1006/keywords3.robot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab3/id_1006/test_case3.robot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab3/id_1007/keyword.robot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab3/id_1007/test_case.robot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab3/ressource/locator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab3/ressource/variables.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab2/tests/test_case.robot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab3/resources/keyword.robot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab3/resources/locator.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab3/resources/variables.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/log/log.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/log/output.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/log/report.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/results/log.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/results/output.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/results/report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab2/resources/keyword.robot" beforeDir="false" afterPath="$PROJECT_DIR$/lab2/resources/keyword.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab2/resources/variables.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab2/resources/variables.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab3/id_1004/keywords3.robot" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/id_1004/keywords4.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab3/id_1004/test_case3.robot" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/id_1004/test_case4.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab3/id_1005/keywords3.robot" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/id_1005/keywords5.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab3/id_1005/test_case3.robot" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/id_1005/test_case5.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab3/id_1006/keywords3.robot" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/id_1006/keywords6.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab3/id_1006/test_case3.robot" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/id_1006/test_case6.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab3/id_1007/keyword.robot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab3/id_1007/test_case.robot" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,6 +69,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;H:/Github/examen_jee/qa_test/lab3&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -120,8 +107,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.27812.49" />
-        <option value="bundled-js-predefined-d6986cc7102b-09060db00ec0-JavaScript-IU-251.27812.49" />
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.23892.409" />
+        <option value="bundled-js-predefined-d6986cc7102b-e03c56caf84a-JavaScript-IU-252.23892.409" />
       </set>
     </attachedChunks>
   </component>
@@ -142,7 +129,10 @@
       <workItem from="1754399290145" duration="3321000" />
       <workItem from="1754516795196" duration="706000" />
       <workItem from="1754523039180" duration="159000" />
-      <workItem from="1754523241185" duration="1251000" />
+      <workItem from="1754523241185" duration="1679000" />
+      <workItem from="1754525277096" duration="950000" />
+      <workItem from="1754563261682" duration="640000" />
+      <workItem from="1754564058647" duration="613000" />
     </task>
     <servers />
   </component>
