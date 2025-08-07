@@ -5,7 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="563de6cf-df3b-4c1d-be0e-3c8239b8829e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/lab3/id_1001/keywords1.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab3/id_1001/test_case1.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab3/id_1002/keywords2.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab3/id_1002/test_case2.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab3/id_1003/keywords3.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab3/id_1003/test_case3.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab3/id_1004/keywords3.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab3/id_1004/test_case3.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab3/id_1005/keywords3.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab3/id_1005/test_case3.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab3/id_1006/keywords3.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab3/id_1006/test_case3.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab3/id_1007/keyword.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab3/id_1007/test_case.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab3/ressource/locator.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab3/ressource/variables.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab3/resources/keyword.robot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab3/resources/locator.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab3/resources/variables.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/log/log.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/log/output.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/log/report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/results/log.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/results/output.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/results/report.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +83,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;H:/Github/examen_jee/qa_test/lab4/resources&quot;,
+    &quot;last_opened_file_path&quot;: &quot;H:/Github/examen_jee/qa_test/lab3&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -67,14 +92,18 @@
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="H:\Github\examen_jee\qa_test\lab3" />
+      <recent name="H:\Github\examen_jee\qa_test" />
       <recent name="H:\Github\examen_jee\qa_test\lab4\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="H:\Github\examen_jee\qa_test\lab1" />
       <recent name="H:\Github\examen_jee\qa_test" />
     </key>
   </component>
@@ -110,6 +139,10 @@
       <workItem from="1753832265311" duration="392000" />
       <workItem from="1753834538034" duration="1747000" />
       <workItem from="1753875106989" duration="56000" />
+      <workItem from="1754399290145" duration="3321000" />
+      <workItem from="1754516795196" duration="706000" />
+      <workItem from="1754523039180" duration="159000" />
+      <workItem from="1754523241185" duration="1251000" />
     </task>
     <servers />
   </component>
